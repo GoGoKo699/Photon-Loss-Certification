@@ -1,0 +1,280 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "exact": {
+    "moment_equalities": 77,
+    "exact_thinning_TV_chi_square_cases": 55,
+    "energy_parity_mixture_bound_cases": 110
+  },
+  "wigner": {
+    "sampled_points": 707,
+    "max_absolute_error": 6.938893903907228e-17,
+    "meaning": "finite identity checks; global positivity is proved analytically"
+  },
+  "linear_programs": [
+    {
+      "eta": 0.5,
+      "output_l1_radius": 0.01,
+      "input_cutoff": 32,
+      "lower_parity": -0.26777777777777784,
+      "upper_parity": 0.2189204545454544,
+      "interval_width": 0.4866982323232322,
+      "truth": -0.25,
+      "max_constraint_violation": 6.418476861114186e-17
+    },
+    {
+      "eta": 0.5,
+      "output_l1_radius": 0.0001,
+      "input_cutoff": 32,
+      "lower_parity": -0.2501777777777779,
+      "upper_parity": -0.2074666666666961,
+      "interval_width": 0.04271111111108178,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.5,
+      "output_l1_radius": 1e-06,
+      "input_cutoff": 32,
+      "lower_parity": -0.2500017777777776,
+      "upper_parity": -0.2495746666666791,
+      "interval_width": 0.0004271111110984993,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.8,
+      "output_l1_radius": 0.01,
+      "input_cutoff": 32,
+      "lower_parity": -0.26012731481481477,
+      "upper_parity": -0.1862124999999999,
+      "interval_width": 0.07391481481481488,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.8,
+      "output_l1_radius": 0.0001,
+      "input_cutoff": 32,
+      "lower_parity": -0.250101273148148,
+      "upper_parity": -0.24913736979166695,
+      "interval_width": 0.0009639033564810551,
+      "truth": -0.25,
+      "max_constraint_violation": 4.132165529885379e-17
+    },
+    {
+      "eta": 0.8,
+      "output_l1_radius": 1e-06,
+      "input_cutoff": 32,
+      "lower_parity": -0.25000101273148145,
+      "upper_parity": -0.24999137369791558,
+      "interval_width": 9.63903356587803e-06,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.95,
+      "output_l1_radius": 0.01,
+      "input_cutoff": 32,
+      "lower_parity": -0.2584380890265122,
+      "upper_parity": -0.23332365519239967,
+      "interval_width": 0.02511443383411255,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.95,
+      "output_l1_radius": 0.0001,
+      "input_cutoff": 32,
+      "lower_parity": -0.2500843808902652,
+      "upper_parity": -0.2498332365519239,
+      "interval_width": 0.00025114433834128036,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    },
+    {
+      "eta": 0.95,
+      "output_l1_radius": 1e-06,
+      "input_cutoff": 32,
+      "lower_parity": -0.2500008438089027,
+      "upper_parity": -0.24999833236551933,
+      "interval_width": 2.5114433833683947e-06,
+      "truth": -0.25,
+      "max_constraint_violation": 1.1102230246251565e-16
+    },
+    {
+      "eta": 1.0,
+      "output_l1_radius": 0.01,
+      "input_cutoff": 32,
+      "lower_parity": -0.258,
+      "upper_parity": -0.24,
+      "interval_width": 0.018000000000000016,
+      "truth": -0.25,
+      "max_constraint_violation": 8.673617379884035e-18
+    },
+    {
+      "eta": 1.0,
+      "output_l1_radius": 0.0001,
+      "input_cutoff": 32,
+      "lower_parity": -0.25008,
+      "upper_parity": -0.2499,
+      "interval_width": 0.00018000000000001348,
+      "truth": -0.25,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "eta": 1.0,
+      "output_l1_radius": 1e-06,
+      "input_cutoff": 32,
+      "lower_parity": -0.25000079999999997,
+      "upper_parity": -0.24999899999999992,
+      "interval_width": 1.8000000000517602e-06,
+      "truth": -0.25,
+      "max_constraint_violation": 2.875570976809943e-17
+    },
+    {
+      "eta": 0.8,
+      "output_l1_radius": 0.021,
+      "input_cutoff": 32,
+      "overflow_mass": 0.01,
+      "lower_parity": -0.2543402777777776,
+      "upper_parity": -0.24137369791666585,
+      "truth": -0.25,
+      "max_constraint_violation": 2.220446049250313e-16
+    }
+  ],
+  "lower_bound_examples": [
+    {
+      "energy": 1.0,
+      "eta": 0.5,
+      "parity_gap": 0.2,
+      "m": 6,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 6.701171657683243
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.5,
+      "parity_gap": 0.1,
+      "m": 11,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 12.887380281583738
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.5,
+      "parity_gap": 0.05,
+      "m": 21,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 24.56665034882478
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.5,
+      "parity_gap": 0.025,
+      "m": 41,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 47.23204330274692
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.8,
+      "parity_gap": 0.2,
+      "m": 6,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 2.54228857432357
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.8,
+      "parity_gap": 0.1,
+      "m": 11,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 5.262761295424337
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.8,
+      "parity_gap": 0.05,
+      "m": 21,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 10.010559557065925
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.8,
+      "parity_gap": 0.025,
+      "m": 41,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 18.813008899789153
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.95,
+      "parity_gap": 0.2,
+      "m": 6,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 0.7099986770164806
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.95,
+      "parity_gap": 0.1,
+      "m": 11,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 1.903563150361339
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.95,
+      "parity_gap": 0.05,
+      "m": 21,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 3.5975449164911106
+    },
+    {
+      "energy": 1.0,
+      "eta": 0.95,
+      "parity_gap": 0.025,
+      "m": 41,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 6.292361268190708
+    },
+    {
+      "energy": 1.0,
+      "eta": 1.0,
+      "parity_gap": 0.2,
+      "m": 6,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 0.1094979256745848
+    },
+    {
+      "energy": 1.0,
+      "eta": 1.0,
+      "parity_gap": 0.1,
+      "m": 11,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 0.8026451062345301
+    },
+    {
+      "energy": 1.0,
+      "eta": 1.0,
+      "parity_gap": 0.05,
+      "m": 21,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 1.4957922867944755
+    },
+    {
+      "energy": 1.0,
+      "eta": 1.0,
+      "parity_gap": 0.025,
+      "m": 41,
+      "common_mean": 1.0,
+      "log_copy_lower_bound_from_chi_square": 2.188939467354421
+    }
+  ],
+  "scope": "Finite exact identities and finite-cutoff LP checks; no numerical proof of asymptotic minimax optimality."
+}

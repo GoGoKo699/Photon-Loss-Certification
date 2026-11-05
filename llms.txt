@@ -1,0 +1,17 @@
+# Photon-Loss Certification
+
+The project determines the minimax number of post-loss copies needed to estimate source photon parity or certify a prescribed negative source Wigner value under a known photon-moment promise.
+
+## Scientific routes
+
+- Story and physical meaning: README.md, science/README.md, science/interpretation.md.
+- Exact access model, quantifiers and main theorems: science/model.md.
+- All-measurement lower bound and globally positive null: science/limits.md.
+- Analytic continuation, finite confidence, overflow and reconstruction resources: science/recovery.md.
+- Higher moments and exponential photon-tail promises: science/tail-promises.md.
+- Attribution and closest comparisons: references/RELATED_WORK.md and references/REFERENCES.md.
+- Reproduction commands and finite-check scope: verification/README.md, verification/verify_photon_loss.py and verification/results.json.
+
+## Essential distinctions
+
+The target is input parity before known pure loss, measured only through received copies. Delta is a parity accuracy; the Wigner value at the origin is 2/pi times parity. The main energy promise is a bound on the mean, not a finite photon cutoff or an exponential tail. The lower bound permits all collective output POVMs; the upper uses photon counting and constrained inference. The certification null is positive throughout phase space, but the matching alternative is negative at the prescribed origin. Copy complexity, optimization runtime and detector resolution are distinct. Fixed-loss bounds match exponential order without claiming an optimal leading exponent. Numerical results check finite examples rather than prove the asymptotic theorem.
