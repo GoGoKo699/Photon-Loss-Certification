@@ -48,7 +48,7 @@ by Hoeffding's inequality for variables in $[-1,1]$. Thus direct uncorrected par
 
 ## Statistical and computational resources
 
-The minimax theorem charges source copies. The finite upper bound also specifies a reconstruction that can actually be written as a linear program, so it is not merely a nonconstructive continuity statement. Its input cutoff may, however, be exponentially large in inverse accuracy under the mean-energy promise. The matrix contains binomial probabilities, and the required numerical tolerance can be exponentially small. No polynomial-time-in-$1/\delta$ reconstruction claim is made in the fixed-loss regime.
+The minimax theorem charges source copies. The finite upper bound also specifies a reconstruction that can actually be written as a linear program, so it is not merely a nonconstructive continuity statement. Its input cutoff may, however, be exponentially large in inverse accuracy under the mean-energy promise. The matrix contains binomial probabilities, and the required numerical tolerance can be exponentially small. No claim of reconstruction in time polynomial in $1/\delta$ is made in the fixed-loss regime.
 
 Photon-number resolution is likewise explicit. The statistical experiment permits photon counting, with finite overflow handling in the construction. It does not assume a hard physical source cutoff. A detector with a prescribed bounded resolution gives a different observation model unless its unresolved tail is included in the error budget.
 

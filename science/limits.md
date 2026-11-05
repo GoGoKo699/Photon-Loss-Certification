@@ -19,7 +19,7 @@ For an integer $m\geq2$, define two Fock-diagonal states by the distributions
 b_m(n)=2^{-m}\binom mn\mathbf 1_{\lbrace 0\leq n\leq m\rbrace },
 \qquad
 o_m(n)=2b_m(n)\mathbf 1_{\lbrace n\text{ odd}\rbrace }.
-\tag{L1}
+\qquad\text{(L1)}
 ```
 
 The binomial distribution has equal even and odd mass. Thus $o_m$ is normalized and is precisely $b_m$ conditioned on odd photon number. We use the same letters for the corresponding diagonal density operators when the meaning is clear.
@@ -32,7 +32,7 @@ Their probability generating functions are
 B_m(z)=\left(\frac{1+z}{2}\right)^m,
 \qquad
 O_m(z)=B_m(z)-B_m(-z).
-\tag{L2}
+\qquad\text{(L2)}
 ```
 
 Consequently
@@ -42,23 +42,23 @@ O_m(z)-B_m(z)=-\left(\frac{1-z}{2}\right)^m,
 \qquad
 B_m(-1)=0,
 \qquad O_m(-1)=-1.
-\tag{L3}
+\qquad\text{(L3)}
 ```
 
 The input parities therefore differ by exactly one.
 
 ### Equal moments
 
-For every integer $j<m$, all derivatives through order $j$ of $O_m-B_m$ vanish at $z=1$. Their falling-factorial moments agree through order $m-1$, and hence so do their ordinary photon moments. In particular, for $m\geq2$,
+For every integer $j\lt m$, all derivatives through order $j$ of $O_m-B_m$ vanish at $z=1$. Their falling-factorial moments agree through order $m-1$, and hence so do their ordinary photon moments. In particular, for $m\geq2$,
 
 ```math
 \mathbb E_{b_m}n=\mathbb E_{o_m}n=\frac m2.
-\tag{L4}
+\qquad\text{(L4)}
 ```
 
 The condition $m\geq2$ matters: the odd-conditioned $m=1$ distribution is concentrated at one photon and has mean one, whereas $b_1$ has mean $1/2$.
 
-For later use, if $s<m$, the common $s$-th ordinary moment is
+For later use, if $s\lt m$, the common ordinary moment of order $s$ is
 
 ```math
 \mu_s(m)
@@ -66,7 +66,7 @@ For later use, if $s<m$, the common $s$-th ordinary moment is
 =\sum_{j=1}^s
 \left\lbrace \begin{matrix}s\\j\end{matrix}\right\rbrace
 \frac{m^{\underline j}}{2^j}.
-\tag{L5}
+\qquad\text{(L5)}
 ```
 
 Here the braces are Stirling numbers of the second kind and $m^{\underline j}=m(m-1)\cdots(m-j+1)$. In particular,
@@ -74,10 +74,10 @@ Here the braces are Stirling numbers of the second kind and $m^{\underline j}=m(
 ```math
 \mu_s(m)=\left(\frac m2\right)^s+O_s(m^{s-1}),
 \qquad \mu_s(m)\leq m^s.
-\tag{L6}
+\qquad\text{(L6)}
 ```
 
-The last inequality also bounds each distribution's $s$-th moment without requiring $s<m$, because both supports lie in $\lbrace 0,\ldots,m\rbrace$.
+The last inequality also bounds each distribution's moment of order $s$ without requiring $s\lt m$, because both supports lie in $\lbrace 0,\ldots,m\rbrace$.
 
 ### A globally Wigner-positive member
 
@@ -109,10 +109,10 @@ W_{b_m}(\alpha)
 =\frac2\pi e^{-2|\alpha|^2}
 \frac{(2|\alpha|^2)^m}{m!}\geq0.
 }
-\tag{L7}
+\qquad\text{(L7)}
 ```
 
-This also follows by viewing $b_m$ as the output of $50\%$ loss applied to $|m\rangle$, but (L7) supplies an explicit pointwise certificate. For $m\geq1$, its value at the origin is zero. In contrast, $W_{o_m}(0)=-2/\pi$.
+This also follows by viewing $b_m$ as the output of 50 percent loss applied to $|m\rangle$, but (L7) supplies an explicit pointwise certificate. For $m\geq1$, its value at the origin is zero. In contrast, $W_{o_m}(0)=-2/\pi$.
 
 ## 2. Exact distinguishability after loss
 
@@ -120,7 +120,7 @@ For a Fock-diagonal source, pure loss is binomial thinning. If $P$ is its input 
 
 ```math
 Q(z)=P(1-\eta+\eta z).
-\tag{L8}
+\qquad\text{(L8)}
 ```
 
 Let $Q_b=T_\eta b_m$ and $Q_o=T_\eta o_m$. Then
@@ -129,7 +129,7 @@ Let $Q_b=T_\eta b_m$ and $Q_o=T_\eta o_m$. Then
 Q_b=\mathrm{Bin}(m,\eta/2),
 \qquad
 Q_o(z)-Q_b(z)=-\left(\frac{\eta(1-z)}2\right)^m.
-\tag{L9}
+\qquad\text{(L9)}
 ```
 
 For $0\leq k\leq m$, write
@@ -141,7 +141,7 @@ q_{b,k}=\binom mk
 \qquad
 d_k=q_{o,k}-q_{b,k}
 =-\left(\frac\eta2\right)^m(-1)^k\binom mk.
-\tag{L10}
+\qquad\text{(L10)}
 ```
 
 The total variation distance is consequently
@@ -149,7 +149,7 @@ The total variation distance is consequently
 ```math
 \mathrm{TV}(Q_o,Q_b)
 =\frac12\sum_k|d_k|=\frac{\eta^m}{2}.
-\tag{L11}
+\qquad\text{(L11)}
 ```
 
 For independent copies, the following chi-square identity gives the more useful bound. We use
@@ -172,19 +172,19 @@ with the value $+\infty$ if absolute continuity fails. The two laws in (L10) hav
 \left[\frac2\eta+\frac2{2-\eta}\right]^m\\
 &=\boxed{\left(\frac\eta{2-\eta}\right)^m}.
 \end{aligned}
-\tag{L12}
+\qquad\text{(L12)}
 ```
 
 At $\eta=1$, this equals one. At every fixed $\eta<1$, it is exponentially small in $m$.
 
 ### Dilution by a common state
 
-Let $t$ be any common input probability distribution and $0<w\leq1$. Define
+Let $t$ be any common input probability distribution and $0\lt w\leq1$. Define
 
 ```math
 p_0=(1-w)t+w b_m,
 \qquad p_1=(1-w)t+w o_m.
-\tag{L13}
+\qquad\text{(L13)}
 ```
 
 Their parity difference is $w$. Writing $t_\eta=T_\eta t$, their output difference is $w(Q_o-Q_b)$, while the null output satisfies
@@ -200,14 +200,14 @@ It follows that
 \chi^2(T_\eta p_1\Vert T_\eta p_0)
 \leq w\left(\frac\eta{2-\eta}\right)^m.
 }
-\tag{L14}
+\qquad\text{(L14)}
 ```
 
 No assumption about $t$'s support is needed. Common-baseline dilution also preserves equality of every photon moment for which $b_m$ and $o_m$ agree.
 
 ## 3. A converse for every collective POVM
 
-The received states for (L13) are diagonal. Their $N$-copy states have the form
+The received states for (L13) are diagonal. Their states on $N$ copies have the form
 
 ```math
 \sigma_j^{\otimes N}
@@ -237,7 +237,7 @@ Let $a$ be an upper bound on the one-copy chi-square divergence. Tensorization a
 ```math
 \mathrm{TV}(Q_1^{\otimes N},Q_0^{\otimes N})
 \leq\frac12\sqrt{e^{Na}-1}.
-\tag{L15}
+\qquad\text{(L15)}
 ```
 
 Every binary test therefore has worst-case error at least its optimal equal-prior average error, hence at least
@@ -245,7 +245,7 @@ Every binary test therefore has worst-case error at least its optimal equal-prio
 ```math
 \max(\alpha_{\rm I},\alpha_{\rm II})
 \geq\frac12-\frac14\sqrt{e^{Na}-1}.
-\tag{L16}
+\qquad\text{(L16)}
 ```
 
 This is the usual binary discrimination bound; [Wat18](../references/REFERENCES.md#wat18) gives the quantum formulation. In particular, put
@@ -258,7 +258,7 @@ If $Na\leq c_{\rm LC}$, the right side of (L16) is $3/8>1/3$. Every test with bo
 
 ```math
 N>\frac{c_{\rm LC}}a.
-\tag{L17}
+\qquad\text{(L17)}
 ```
 
 For the diluted pair this becomes
@@ -268,7 +268,7 @@ For the diluted pair this becomes
 N>\frac{c_{\rm LC}}w
 \left(\frac{2-\eta}{\eta}\right)^m.
 }
-\tag{L18}
+\qquad\text{(L18)}
 ```
 
 For other fixed confidence levels one can use (L16) directly. There is no dependence here on an estimator being unbiased, linear, or based on photon counting.
@@ -283,7 +283,7 @@ For this task choose the common baseline to be vacuum. Then (L13) has
 \qquad
 \theta(\rho_0)=1-w,
 \quad \theta(\rho_1)=1-2w.
-\tag{L19}
+\qquad\text{(L19)}
 ```
 
 Fix $E>0$, and suppose
@@ -298,7 +298,7 @@ Set
 w=4\delta,
 \qquad
 m=\left\lfloor\frac{E}{2\delta}\right\rfloor\geq2.
-\tag{L20}
+\qquad\text{(L20)}
 ```
 
 Both states satisfy the mean bound, and their parities differ by $4\delta$. An estimator that is within $\delta$ of the correct parity with probability at least $2/3$ on both states induces a test with both errors at most $1/3$, by thresholding at the midpoint of their parities. Equation (L18) yields the explicit converse
@@ -310,7 +310,7 @@ N_{\rm est}(E,\eta,\delta,1/3)
 \frac{c_{\rm LC}}{4\delta}
 \left(\frac{2-\eta}{\eta}\right)^{\left\lfloor E/(2\delta)\right\rfloor}.
 }
-\tag{L21}
+\qquad\text{(L21)}
 ```
 
 These parities need not be negative. The estimation lower bound holds at every fixed $E>0$, including $E<1/2$.
@@ -349,7 +349,7 @@ Its mean is $1/2$, its origin parity is zero, and its Wigner function is globall
 \rho_0=(1-w)\tau+w b_m,
 \qquad
 \rho_1=(1-w)\tau+w o_m
-\tag{L22}
+\qquad\text{(L22)}
 ```
 
 satisfy
@@ -365,7 +365,7 @@ W_{\rho_0}(\alpha)\geq0\quad\text{for every }\alpha,
 \mathrm{Tr}(\hat n\rho_j)
 =\frac{1+w(m-1)}2,
 \qquad j=0,1.
-\tag{L23}
+\qquad\text{(L23)}
 ```
 
 For $E>1/2$ and
@@ -380,7 +380,7 @@ take
 w=\delta,
 \qquad
 m=\left\lfloor1+\frac{2E-1}{\delta}\right\rfloor\geq2.
-\tag{L24}
+\qquad\text{(L24)}
 ```
 
 This is a valid null/alternative pair for the certification promise. Hence
@@ -393,21 +393,21 @@ N_{\rm cert}(E,\eta,\delta,1/3)
 \left(\frac{2-\eta}{\eta}\right)^{
 \left\lfloor1+(2E-1)/\delta\right\rfloor}.
 }
-\tag{L25}
+\qquad\text{(L25)}
 ```
 
 The null is positive at every phase-space point, not only at the tested origin. Therefore this same pair also obstructs any broader uniform negativity-certification task whose alternatives include these states. The matching upper theorem remains the prescribed-origin task.
 
 ### Exact-energy version with a positive baseline
 
-Let $e_w=[1+w(m-1)]/2\leq E$, with $m$ from (L24). Its slack obeys $0\leq E-e_w<w/2$. Set
+Let $e_w=[1+w(m-1)]/2\leq E$, with $m$ from (L24). Its slack obeys $0\leq E-e_w\lt w/2$. Set
 
 ```math
 a=\frac{E-wm/2}{1-w}
 =\frac12+\frac{E-e_w}{1-w},
 \qquad
 \tau_a=(2-2a)b_1+(2a-1)b_2.
-\tag{L26}
+\qquad\text{(L26)}
 ```
 
 For $w\leq1/2$, one has $1/2\leq a\leq1$, so $\tau_a$ is a probability mixture. Its mean is $a$, its parity is zero, and its Wigner function is globally nonnegative. Replacing $\tau$ by $\tau_a$ in (L22) gives two states with mean exactly $E$, with the same null/alternative parities and the same chi-square bound. The harder statistical conclusion therefore survives exact common-energy side information.
@@ -441,7 +441,7 @@ Equations (L16)–(L17) imply
 N_{\rm est}(E,\eta,\delta,1/3)
 >\frac{c_{\rm LC} a_E(1-a_E)}{4\delta^2}.
 }
-\tag{L27}
+\qquad\text{(L27)}
 ```
 
 The constant depends on the fixed energy budget, but not on $\eta\in(0,1]$.
@@ -463,7 +463,7 @@ Consequently
 N_{\rm cert}(E,\eta,\delta,1/3)
 >\frac{c_{\rm LC}}{\delta^2}.
 }
-\tag{L28}
+\qquad\text{(L28)}
 ```
 
 ## 7. Uniform weak-loss consequence
@@ -479,7 +479,7 @@ Write $\nu=1-\eta$. For $\eta\in[\eta_0,1]$,
 ```math
 2\nu\leq\lambda_\eta
 \leq\frac{2\nu}{\eta_0(2-\eta_0)}.
-\tag{L29}
+\qquad\text{(L29)}
 ```
 
 For fixed $E>0$, (L21) and (L27), together with
@@ -496,7 +496,7 @@ give the lower half of
 \log N_{\rm est}(E,\eta,\delta,1/3)
 =\Theta_{E,\eta_0} \left(
 \log\frac1\delta+\frac{\nu}{\delta}\right).
-\tag{L30}
+\qquad\text{(L30)}
 ```
 
 The upper half is proved in [recovery.md](recovery.md). One takes the maximum of the parametric and the hard-tail lower bounds; the maximum of two nonnegative scales is within a factor two of their sum. Fixed multiplicative constants and their logarithms are absorbed by choosing a sufficiently small $\delta_0(E,\eta_0)>0$.
@@ -511,7 +511,7 @@ For a varying loss schedule and fixed $E$, the complete uniform law permits a po
 
 - **Zero energy.** At $E=0$, the source is vacuum and parity is known without copies. Bounds that divide by $E$ or use $a_E>0$ do not apply.
 - **Empty negative alternative.** Since $p_{\rm odd}=(1-\theta)/2$ and $\mathbb E n\geq p_{\rm odd}$, the promise $\theta\leq-\delta$ requires $E\geq(1+\delta)/2$. This condition is also sufficient, by the vacuum/one-photon mixture above. In particular, no positive origin gap is possible for $E\leq1/2$.
-- **Coarse estimation.** The full parity range under mean budget $E$ is $[1-2\min\lbrace E,1\rbrace ,1]$. For accuracy at least $\min\lbrace E,1\rbrace$, a constant estimate suffices. The theorems concern the small-$\delta$ regime with a fixed nonzero budget.
+- **Coarse estimation.** The full parity range under mean budget $E$ is $[1-2\min\lbrace E,1\rbrace ,1]$. For accuracy at least $\min\lbrace E,1\rbrace$, a constant estimate suffices. The theorems concern the regime of small $\delta$ with a fixed nonzero budget.
 - **Sublevel compactness.** The diagonal class $\lbrace p:\sum p_n=1,\ \sum n p_n\leq E\rbrace$ is compact in $\ell_1$: its tails are uniformly bounded by $E/(M+1)$, and the moment inequality is closed under $\ell_1$ convergence by Fatou's lemma. This supports existence of constrained extremizers. Parity and binomial thinning are continuous in this topology.
 - **Exact-energy levels are different.** The class $\sum n p_n=E$ need not be closed in $\ell_1$: for $m\to\infty$, $(1-E/m)|0\rangle\langle0|+(E/m)|m\rangle\langle m|$ has mean $E$ and converges to vacuum. The exact-energy lower constructions above do not assert compactness of that equality class or replace the upper-bound inequality model.
 - **Identifiability.** For every $\eta>0$, binomial thinning is injective on probability distributions: equality of output generating functions gives equality of input generating functions on an open disk, hence everywhere in the unit disk by the identity theorem and at $-1$ by continuity. The obstruction is sample complexity, not nonidentifiability. At $\eta=0$, all outputs are vacuum and this argument fails; that endpoint is excluded.

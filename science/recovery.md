@@ -10,7 +10,7 @@ Let $\rho$ be an arbitrary single-mode state, let $\hat n$ be its photon-number 
 
 ```math
 \mathrm{Tr}(\hat n\rho)\le E.
-\tag{R1}
+\qquad\text{(R1)}
 ```
 
 The receiver obtains $N$ independent copies of $\mathcal L_\eta(\rho)$, where $0<\eta\le1$ is the known pure-loss transmissivity. Define the input and output photon-count distributions by
@@ -20,7 +20,7 @@ p_n=\langle n|\rho|n\rangle,
 \qquad
 q_k=(T_\eta p)_k
 =\sum_{n=k}^{\infty}\binom nk\eta^k(1-\eta)^{n-k}p_n.
-\tag{R2}
+\qquad\text{(R2)}
 ```
 
 Thus $\sum_k kq_k=\eta\sum_n np_n\le\eta E$. Input coherences affect neither this count distribution nor the target
@@ -30,7 +30,7 @@ Thus $\sum_k kq_k=\eta\sum_n np_n\le\eta E$. Input coherences affect neither thi
 =\sum_{n=0}^{\infty}(-1)^np_n,
 \qquad
 W_\rho(0)=\frac2\pi\theta(p).
-\tag{R3}
+\qquad\text{(R3)}
 ```
 
 The convention in (R3) fixes the Wigner normalization. An additive parity error $\delta$ is an additive Wigner-value error $2\delta/\pi$.
@@ -42,7 +42,7 @@ Set
 ```math
 \mathcal P_E=
 \left\lbrace p:p_n\ge0,\ \sum_n p_n=1,\ \sum_n np_n\le E\right\rbrace .
-\tag{R4}
+\qquad\text{(R4)}
 ```
 
 When $E=0$, the state is the vacuum and its parity is exactly one. The nontrivial statements below assume $E>0$. Transmissivity zero is excluded: the output is then independent of the input.
@@ -51,7 +51,7 @@ When $E=0$, the state is the vacuum and its parity is exactly one. The nontrivia
 
 ### Theorem R1: an explicit first-moment modulus
 
-Fix $E>0$, $0<\eta\le1$, and $0<h<\eta$. Define
+Fix $E>0$, $0<\eta\le1$, and $0\lt h<\eta$. Define
 
 ```math
 c=1-\eta,
@@ -59,7 +59,7 @@ c=1-\eta,
 \qquad
 \kappa=\frac{\eta}
 {(2-\eta)\log[(2-\eta)/(\eta-h)]}.
-\tag{R5}
+\qquad\text{(R5)}
 ```
 
 If $p,p'\in\mathcal P_E$ satisfy
@@ -67,7 +67,7 @@ If $p,p'\in\mathcal P_E$ satisfy
 ```math
 \Vert T_\eta p-T_\eta p'\Vert _1\le\epsilon,
 \qquad 0<\epsilon<2Eh,
-\tag{R6}
+\qquad\text{(R6)}
 ```
 
 then
@@ -79,7 +79,7 @@ then
 \epsilon+
 \frac{2E}{\kappa\log(2Eh/\epsilon)}.
 }
-\tag{R7}
+\qquad\text{(R7)}
 ```
 
 The right side may also be replaced by its minimum with two. If the output distributions are identical, the input distributions, and hence their parities, are identical.
@@ -94,14 +94,14 @@ P(z)=\sum_{n=0}^{\infty}p_nz^n,
 \widetilde P(z)=\sum_{n=0}^{\infty}p_n'z^n,
 \qquad
 f(z)=P(z)-\widetilde P(z).
-\tag{R8}
+\qquad\text{(R8)}
 ```
 
 Derivatives of $f$ are written $f^{(1)},f^{(2)},\ldots$. Both generating functions are analytic in the open unit disk and continuous on its closure. Moreover,
 
 ```math
 \sum_{n=1}^{\infty}n|p_n-p_n'|\le2E.
-\tag{R9}
+\qquad\text{(R9)}
 ```
 
 The derivative series consequently converges uniformly on the closed unit disk, giving a continuous boundary extension and
@@ -109,7 +109,7 @@ The derivative series consequently converges uniformly on the closed unit disk, 
 ```math
 |f^{(1)}(z)|\le2E
 \qquad (|z|\le1).
-\tag{R10}
+\qquad\text{(R10)}
 ```
 
 This first-derivative bound, including its boundary continuity, is the specific regularity supplied by the mean-energy promise.
@@ -120,7 +120,7 @@ Let $Q$ and $\widetilde Q$ be the corresponding output generating functions. Bin
 Q(w)=P(c+\eta w),
 \qquad
 \widetilde Q(w)=\widetilde P(c+\eta w).
-\tag{R11}
+\qquad\text{(R11)}
 ```
 
 The series are absolutely convergent for $|w|\le1$, so (R6) implies
@@ -129,17 +129,17 @@ The series are absolutely convergent for $|w|\le1$, so (R6) implies
 |f(z)|\le\epsilon
 \qquad
 \text{on }D_\eta=\lbrace z:|z-c|\le\eta\rbrace .
-\tag{R12}
+\qquad\text{(R12)}
 ```
 
 The observed disk touches the unit circle at $z=1$. On the strictly smaller disk $D_r=\lbrace z:|z-c|\le r\rbrace$, Cauchy's derivative estimate gives
 
 ```math
 |f^{(1)}(z)|\le\frac\epsilon h.
-\tag{R13}
+\qquad\text{(R13)}
 ```
 
-To justify (R13) even when a radius-$h$ Cauchy circle touches $z=1$, first use every radius $h'<h$ and then let $h'$ increase to $h$. No analytic extension across the unit circle is assumed.
+To justify (R13) even when a Cauchy circle of radius $h$ touches $z=1$, first use every radius $h'\lt h$ and then let $h'$ increase to $h$. No analytic extension across the unit circle is assumed.
 
 ### Proof: harmonic measure and an explicit barrier
 
@@ -147,7 +147,7 @@ Consider the doubly connected domain
 
 ```math
 \Omega=\lbrace z:|z|<1\rbrace \setminus D_r.
-\tag{R14}
+\qquad\text{(R14)}
 ```
 
 Its two boundary circles are disjoint because $c+r=1-h<1$. Let $\omega$ be harmonic on $\Omega$, continuous on its closure, equal to one on the inner circle and zero on the outer circle. The two-constants theorem, applied to the subharmonic function $\log|f^{(1)}|$, gives
@@ -157,7 +157,7 @@ Its two boundary circles are disjoint because $c+r=1-h<1$. Let $\omega$ be harmo
 \le 2E\exp[-\omega(z)L],
 \qquad
 L=\log\frac{2Eh}{\epsilon}>0.
-\tag{R15}
+\qquad\text{(R15)}
 ```
 
 Equivalently, subtract the harmonic function $\log(2E)-\omega L$ from $\log|f^{(1)}|$ and apply the maximum principle. Zeros of the derivative are allowed: the logarithm is subharmonic with value minus infinity there. If the derivative vanishes identically, the conclusion follows directly.
@@ -166,7 +166,7 @@ The Green function of the unit disk with its pole at $c$ is
 
 ```math
 g(z)=-\log\left|\frac{z-c}{1-cz}\right|.
-\tag{R16}
+\qquad\text{(R16)}
 ```
 
 Its pole is inside the removed disk. It is positive and harmonic on $\Omega$, and zero on the outer circle. On the inner circle,
@@ -174,14 +174,14 @@ Its pole is inside the removed disk. It is positive and harmonic on $\Omega$, an
 ```math
 g(z)=\log\frac{|1-cz|}{r}
 \le\log\frac{1+c}{r}=:\mathcal M.
-\tag{R17}
+\qquad\text{(R17)}
 ```
 
 Here $\mathcal M>0$. The maximum principle applied to $\omega-g/\mathcal M$ therefore yields
 
 ```math
 \omega(z)\ge\frac{g(z)}{\mathcal M}.
-\tag{R18}
+\qquad\text{(R18)}
 ```
 
 Let $x_0=c-r$. For $-1\le x\le x_0$, the ratio $(c-x)/(1-cx)$ lies in $(0,1]$. Hence
@@ -194,14 +194,14 @@ g(x)
 &=\frac{(1-c)(1+x)}{1-cx}\\
 &\ge\frac{\eta(1+x)}{2-\eta}.
 \end{aligned}
-\tag{R19}
+\qquad\text{(R19)}
 ```
 
 Together, (R18) and (R19) give the explicit lower bound
 
 ```math
 \omega(x)\ge\kappa(1+x).
-\tag{R20}
+\qquad\text{(R20)}
 ```
 
 ### Proof: integration to the parity point
@@ -218,7 +218,7 @@ The point $x_0$ belongs to the observed disk, so $|f(x_0)|\le\epsilon$. The boun
 \frac{2E[1-e^{-\kappa L(1+x_0)}]}{\kappa L}\\
 &\le\epsilon+\frac{2E}{\kappa L}.
 \end{aligned}
-\tag{R21}
+\qquad\text{(R21)}
 ```
 
 Since $f(-1)=\theta(p)-\theta(p')$, this proves (R7). If the output distance is zero, (R11) makes $f$ vanish on an open disk; the identity theorem and continuity give $f=0$ on the closed unit disk. This completes the proof.
@@ -239,7 +239,7 @@ M=\left\lceil\frac{8E}{\epsilon}\right\rceil,
 H_M=\sum_{j=1}^{M}\frac1j,
 \qquad
 A_M=2+\sqrt{\eta E H_M},
-\tag{R22}
+\qquad\text{(R22)}
 ```
 
 and take
@@ -252,17 +252,17 @@ N\ge
 \left[A_M+\sqrt{2\log(1/\beta)}\right]^2
 \right\rceil.
 }
-\tag{R23}
+\qquad\text{(R23)}
 ```
 
 On each received copy perform the finite measurement with outcomes
 
 ```math
-0,1,\ldots,M,*.
-\tag{R24}
+0,1,\ldots,M,\ast.
+\qquad\text{(R24)}
 ```
 
-The first $M+1$ effects are $|k\rangle\langle k|$, and the overflow effect is $I-\sum_{k=0}^{M}|k\rangle\langle k|$. Let $\widehat q_k$ and $\widehat q_*$ be the empirical frequencies.
+The first $M+1$ effects are $|k\rangle\langle k|$, and the overflow effect is $I-\sum_{k=0}^{M}|k\rangle\langle k|$. Let $\widehat q_k$ and $\widehat q_{\ast}$ be the empirical frequencies.
 
 Use a deterministic linear-program rule to find a probability vector $\widehat p=(\widehat p_0,\ldots,\widehat p_M)$ satisfying
 
@@ -272,7 +272,7 @@ Use a deterministic linear-program rule to find a probability vector $\widehat p
 \sum_{n=0}^{M}\widehat p_n=1,
 \qquad
 \sum_{n=0}^{M}n\widehat p_n\le E,
-\tag{R25}
+\qquad\text{(R25)}
 ```
 
 and
@@ -280,16 +280,16 @@ and
 ```math
 \sum_{k=0}^{M}
 \left|(T_\eta\widehat p)_k-\widehat q_k\right|
-+\widehat q_*
++\widehat q_{\ast}
 \le\frac\epsilon2.
-\tag{R26}
+\qquad\text{(R26)}
 ```
 
 Absolute values in (R26) are implemented with nonnegative linear-program slack variables. If the system is infeasible, report an arbitrary parity estimate in $[-1,1]$, for example zero. Otherwise report
 
 ```math
 \widehat\theta=\sum_{n=0}^{M}(-1)^n\widehat p_n.
-\tag{R27}
+\qquad\text{(R27)}
 ```
 
 For every $p\in\mathcal P_E$, with probability at least $1-\beta$ the constraints are feasible and every feasible fit satisfies
@@ -297,7 +297,7 @@ For every $p\in\mathcal P_E$, with probability at least $1-\beta$ the constraint
 ```math
 \Vert T_\eta\widehat p-T_\eta p\Vert _1
 \le\frac{3\epsilon}{4}\le\epsilon.
-\tag{R28}
+\qquad\text{(R28)}
 ```
 
 Consequently, whenever $\epsilon<2Eh$, Theorem R1 gives on the same event
@@ -306,7 +306,7 @@ Consequently, whenever $\epsilon<2Eh$, Theorem R1 gives on the same event
 |\widehat\theta-\theta(p)|
 \le
 \epsilon+\frac{2E}{\kappa\log(2Eh/\epsilon)}.
-\tag{R29}
+\qquad\text{(R29)}
 ```
 
 ### Proof: concentration of the finite histogram
@@ -316,7 +316,7 @@ Let $\mathsf A_M$ aggregate a distribution into the categories in (R24), and wri
 ```math
 \mathbb E|\widehat q_j-\overline q_j|
 \le\sqrt{\frac{\overline q_j}{N}}.
-\tag{R30}
+\qquad\text{(R30)}
 ```
 
 The zero-count and overflow categories each contribute at most $1/\sqrt N$. For the remaining categories, weighted Cauchy–Schwarz gives
@@ -329,7 +329,7 @@ The zero-count and overflow categories each contribute at most $1/\sqrt N$. For 
 \sqrt{\left(\sum_{k=1}^{M}kq_k\right)H_M}\\
 &\le\sqrt{\eta E H_M}.
 \end{aligned}
-\tag{R31}
+\qquad\text{(R31)}
 ```
 
 It follows that
@@ -337,7 +337,7 @@ It follows that
 ```math
 \mathbb E\Vert \widehat q-\overline q\Vert _1
 \le\frac{A_M}{\sqrt N}.
-\tag{R32}
+\qquad\text{(R32)}
 ```
 
 Changing one sample changes the empirical vector by at most $2/N$ in $\ell^1$ and hence changes its distance from $\overline q$ by at most $2/N$. The bounded-differences inequality therefore yields
@@ -348,14 +348,14 @@ Changing one sample changes the empirical vector by at most $2/N$ in $\ell^1$ an
 >\frac{A_M}{\sqrt N}+t
 \right\rbrace
 \le e^{-Nt^2/2}.
-\tag{R33}
+\qquad\text{(R33)}
 ```
 
 Taking $t=\sqrt{2\log(1/\beta)/N}$ and using (R23) proves that, with probability at least $1-\beta$,
 
 ```math
 \Vert \widehat q-\mathsf A_Mq\Vert _1\le\frac\epsilon4.
-\tag{R34}
+\qquad\text{(R34)}
 ```
 
 ### Proof: feasibility without inverting a truncated tail
@@ -368,7 +368,7 @@ p^{[M]}_0=p_0+\sum_{n>M}p_n,
 p^{[M]}_n=p_n\quad(1\le n\le M),
 \qquad
 p^{[M]}_n=0\quad(n>M).
-\tag{R35}
+\qquad\text{(R35)}
 ```
 
 This preserves normalization and decreases the mean. Since every photon number in the removed tail is at least $M+1$,
@@ -378,7 +378,7 @@ This preserves normalization and decreases the mean. Since every photon number i
 =2\sum_{n>M}p_n
 \le\frac{2E}{M+1}
 \le\frac\epsilon4.
-\tag{R36}
+\qquad\text{(R36)}
 ```
 
 The stochastic maps $T_\eta$ and $\mathsf A_M$ contract $\ell^1$ distance. On event (R34),
@@ -389,7 +389,7 @@ The stochastic maps $T_\eta$ and $\mathsf A_M$ contract $\ell^1$ distance. On ev
 \right\Vert _1
 \le\frac\epsilon4+\frac\epsilon4
 =\frac\epsilon2.
-\tag{R37}
+\qquad\text{(R37)}
 ```
 
 Thus $p^{[M]}$ is a feasible candidate for (R25)–(R26). It is only a proof witness; the estimator never needs to know the true tail.
@@ -405,7 +405,7 @@ For every fitted input supported on $0,\ldots,M$, the thinned law also has no ma
 \mathsf A_MT_\eta\widehat p-\mathsf A_Mq
 \right\Vert _1.
 \end{aligned}
-\tag{R38}
+\qquad\text{(R38)}
 ```
 
 Combining (R26), (R34), and (R38) gives (R28). Both $p$ and $\widehat p$ have mean at most $E$, so Theorem R1 applies to them directly. No inverse channel is applied to a discarded tail, and no projection of the full quantum state is used. This proves the theorem.
@@ -419,7 +419,7 @@ There is a useful finite-precision version of the same construction. Suppose the
 \sum_{k=0}^{M}
 |\widetilde T_{kn}-(T_\eta)_{kn}|
 \le\frac\epsilon8.
-\tag{R39}
+\qquad\text{(R39)}
 ```
 
 Keep normalization, positivity and the mean constraint (R25), and replace (R26) by
@@ -427,9 +427,9 @@ Keep normalization, positivity and the mean constraint (R25), and replace (R26) 
 ```math
 \sum_{k=0}^{M}
 | (\widetilde T\widehat p)_k-\widehat q_k |
-+\widehat q_*
++\widehat q_{\ast}
 \le\frac{5\epsilon}{8}.
-\tag{R40}
+\qquad\text{(R40)}
 ```
 
 On event (R34), the witness $p^{[M]}$ remains feasible: its sampling, truncation and channel-table errors sum to at most $\epsilon/4+\epsilon/4+\epsilon/8=5\epsilon/8$. Every feasible fit has
@@ -438,7 +438,7 @@ On event (R34), the witness $p^{[M]}$ remains feasible: its sampling, truncation
 \Vert T_\eta\widehat p-q\Vert _1
 \le\frac\epsilon8+\frac{5\epsilon}{8}
 +\frac\epsilon4=\epsilon.
-\tag{R41}
+\qquad\text{(R41)}
 ```
 
 Thus (R29) remains valid. A sufficient entrywise table accuracy is $\epsilon/[8(M+1)]$. Approximate optimization must also certify the displayed normalization, mean and residual constraints; an uncharged numerical residual is not part of the guarantee.
@@ -455,7 +455,7 @@ Let $E>0$, $0<\eta\le1$, $0<\delta\le1$, and $0<\beta<1$. Choose any $h\in(0,\et
 \epsilon
 =\min\left\lbrace \frac\delta8,Eh\right\rbrace
 \exp\left[-\frac{8E}{\kappa\delta}\right].
-\tag{R42}
+\qquad\text{(R42)}
 ```
 
 Use the measurement, sample count and fit in Theorem R2, or its certified-coefficient version. Then
@@ -465,7 +465,7 @@ Use the measurement, sample count and fit in Theorem R2, or its certified-coeffi
 |\widehat\theta-\theta(p)|>\frac{3\delta}{8}
 \right\rbrace \le\beta
 \qquad\text{for every }p\in\mathcal P_E.
-\tag{R43}
+\qquad\text{(R43)}
 ```
 
 Indeed $\epsilon\le\delta/8$ and
@@ -473,7 +473,7 @@ Indeed $\epsilon\le\delta/8$ and
 ```math
 \log\frac{2Eh}{\epsilon}
 \ge\log2+\frac{8E}{\kappa\delta},
-\tag{R44}
+\qquad\text{(R44)}
 ```
 
 so the second term in (R29) is at most $\delta/4$. All constants in the construction are explicit, and no asymptotic statement is required for (R43).
@@ -492,7 +492,7 @@ Fix $0<\eta_0\le1$. Suppose
 \eta\in[\eta_0,1],
 \qquad
 0<\delta\le\min\left\lbrace \frac14,\eta_0E\right\rbrace .
-\tag{R45}
+\qquad\text{(R45)}
 ```
 
 Define
@@ -502,7 +502,7 @@ Define
 \qquad b=\frac{\delta}{4E},
 \qquad
 h=\min\left\lbrace \frac\eta2,\max\lbrace \nu,b\rbrace \right\rbrace ,
-\tag{R46}
+\qquad\text{(R46)}
 ```
 
 and use $\kappa$ from (R5). The choice
@@ -510,7 +510,7 @@ and use $\kappa$ from (R5). The choice
 ```math
 \epsilon=\frac\delta8
 \exp\left[-\frac{8E}{\kappa\delta}\right]
-\tag{R47}
+\qquad\text{(R47)}
 ```
 
 and the explicit sample count (R23) satisfy (R43). In particular, for constants depending only on $\eta_0$,
@@ -526,7 +526,7 @@ C_{\eta_0}\delta^{-2}
 +\log\frac1\beta
 \right]
 \exp\left[C_{\eta_0}\frac{\nu E}{\delta}\right].
-\tag{R48}
+\qquad\text{(R48)}
 ```
 
 Here and below an upper bound on $N$ refers to choosing $N$ equal to the sufficient integer in (R23), rather than to every larger sample count. At confidence $2/3$, (R48) implies
@@ -537,7 +537,7 @@ Here and below an upper bound on $N$ refers to choosing $N$ equal to the suffici
 \log\frac{E+1}{\delta}
 +\frac{(1-\eta)E}{\delta}
 \right).
-\tag{R49}
+\qquad\text{(R49)}
 ```
 
 ### Proof of uniformity and explicit conservative constants
@@ -550,7 +550,7 @@ b\le h\le\frac\eta2,
 h\le\nu+b,
 \qquad
 r=\eta-h\ge\frac\eta2.
-\tag{R50}
+\qquad\text{(R50)}
 ```
 
 Using $\log(1+x)\le x$,
@@ -563,7 +563,7 @@ Using $\log(1+x)\le x$,
 &\le\frac4{\eta_0^2}(2\nu+h)\\
 &\le\frac{12}{\eta_0^2}(\nu+b).
 \end{aligned}
-\tag{R51}
+\qquad\text{(R51)}
 ```
 
 Since $Eh\ge\delta/4$, (R47) is exactly the choice (R42) in this regime. Also
@@ -576,7 +576,7 @@ R=\frac{\nu E}{\delta},
 c_0=\frac18e^{-24/\eta_0^2},
 \qquad
 C_0=\frac{96}{\eta_0^2}.
-\tag{R52}
+\qquad\text{(R52)}
 ```
 
 For a fully numerical, deliberately conservative form of (R48), $H_M\le1+\log M$ and $M\le1+8E/\epsilon$ yield
@@ -590,7 +590,7 @@ N\le 1+48c_0^{-2}\delta^{-2}e^{2C_0R}
 +C_0R\right\rbrace \\
 &+2\log\frac1\beta\bigg].
 \end{aligned}
-\tag{R53}
+\qquad\text{(R53)}
 ```
 
 To obtain this expression, apply $(x+y+z)^2\le3(x^2+y^2+z^2)$ to (R23), use $\eta\le1$, and bound
@@ -599,7 +599,7 @@ To obtain this expression, apply $(x+y+z)^2\le3(x^2+y^2+z^2)$ to (R23), use $\et
 \log\left(1+\frac{8E}{\epsilon}\right)
 \le
 \log\left(1+\frac{8E}{c_0\delta}\right)+C_0R.
-\tag{R54}
+\qquad\text{(R54)}
 ```
 
 Absorbing constants and logarithms in (R53) gives (R48). To check that (R49) is uniform in the energy bound, put $L_\delta=\log[(E+1)/\delta]$. Assumption (R45) gives $L_\delta\ge\log4$. The logarithm of the prefactor in (R48) is at most a constant depending only on $\eta_0$, plus
@@ -633,14 +633,14 @@ There is a simpler estimator when the bias from loss is already below the requir
 &\le2\Pr\lbrace L\ge1\mid n\rbrace \\
 &\le2\nu n.
 \end{aligned}
-\tag{R55}
+\qquad\text{(R55)}
 ```
 
 Averaging proves
 
 ```math
 |\theta(T_\eta p)-\theta(p)|\le2\nu E.
-\tag{R56}
+\qquad\text{(R56)}
 ```
 
 The empirical mean of received parity outcomes, each in $\lbrace -1,1\rbrace$, obeys Hoeffding's bound
@@ -648,14 +648,14 @@ The empirical mean of received parity outcomes, each in $\lbrace -1,1\rbrace$, o
 ```math
 \Pr\lbrace  |\widehat\theta_{\rm out}-\theta(T_\eta p)|>t\rbrace
 \le2e^{-Nt^2/2}.
-\tag{R57}
+\qquad\text{(R57)}
 ```
 
 Whenever $\delta>2\nu E$, the choice
 
 ```math
 N\ge\frac{2\log(2/\beta)}{(\delta-2\nu E)^2}
-\tag{R58}
+\qquad\text{(R58)}
 ```
 
 suffices for input-parity error at most $\delta$. In particular:
@@ -674,14 +674,14 @@ Consider the promise problem
 H_0:\ W_\rho(\alpha)\ge0\text{ for all }\alpha,
 \qquad
 H_1:\ \theta(p)\le-\delta,
-\tag{R59}
+\qquad\text{(R59)}
 ```
 
 with the same mean-energy promise. The null implies $\theta(p)\ge0$. Use Corollary R3 or R4 with parameter $\delta$ and declare the negative alternative when
 
 ```math
 \widehat\theta<-\frac\delta2.
-\tag{R60}
+\qquad\text{(R60)}
 ```
 
 On event (R43), every null gives $\widehat\theta\ge-3\delta/8$, and every alternative gives $\widehat\theta\le-5\delta/8$. The test therefore has error probability at most $\beta$ under either promise. Its alternative has Wigner depth at least $2\delta/\pi$ at the origin.
@@ -697,7 +697,7 @@ The statistical bound does not imply a small reconstruction problem. The finite 
 ```math
 M\le1+\frac{8E}{c_0\delta}
 \exp\left[C_0\frac{(1-\eta)E}{\delta}\right].
-\tag{R61}
+\qquad\text{(R61)}
 ```
 
 Thus both the detector cutoff used by this estimator and its optimization dimension can be exponentially large in the hard regime. These are costs of this sufficient construction, not lower bounds on every estimator's detector resolution or running time.

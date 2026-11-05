@@ -1,6 +1,6 @@
 # What stronger photon-tail promises buy
 
-The mean-energy result changes when the experimenter is given a stronger, quantitative promise on the source's photon tail. A fixed integer $s$-th moment gives a stretched exponential copy cost, with exponent $\delta^{-1/s}$. A known exponential moment gives a polynomial upper bound. These are different statistical classes: none of these additional promises is used in the [mean-energy theorem](model.md).
+The mean-energy result changes when the experimenter is given a stronger, quantitative promise on the source's photon tail. A moment of fixed integer order $s$ gives a stretched exponential copy cost, with exponent $\delta^{-1/s}$. A known exponential moment gives a polynomial upper bound. These are different statistical classes: none of these additional promises is used in the [mean-energy theorem](model.md).
 
 This page proves both sides of the finite-moment hierarchy and a constructive exponential-moment upper. The latter is not a claim about the optimal polynomial exponent. All tasks concern input parity at the prescribed origin, with known transmission $\eta$, and confidence $2/3$ unless indicated otherwise. The lower bounds cover arbitrary collective measurements of the received copies; the upper bounds use separate photon counting and a finite constrained fit.
 
@@ -13,7 +13,7 @@ For a fixed integer $s\geq1$ and a known finite budget $M_s>0$, define
 ```math
 \mathcal S_{s,M_s}
 =\left\lbrace \rho:\mathrm{Tr}(\hat n^s\rho)\leq M_s\right\rbrace .
-\tag{T1}
+\qquad\text{(T1)}
 ```
 
 States are normalized density operators. Let $N_{\rm est}^{(s)}$ and $N_{\rm cert}^{(s)}$ denote the two minimax copy budgets from [model.md](model.md), with this class in place of the mean-energy class. The certification null still has a globally nonnegative Wigner function, and its alternative still has input parity at most $-\delta$.
@@ -28,7 +28,7 @@ Fix $s\in\lbrace 1,2,\ldots\rbrace$, $\eta_0>0$, and $M_s>0$. As $\delta\downarr
 =\Theta_{s,M_s,\eta_0}
 \left(\log\frac1\delta+\nu\delta^{-1/s}\right).
 }
-\tag{T2}
+\qquad\text{(T2)}
 ```
 
 The same statement holds for $N_{\rm cert}^{(s)}$ if the fixed budget satisfies $M_s>1/2$. The implicit constants and the sufficiently small accuracy threshold depend on the displayed fixed parameters. They are not uniform as $s$ grows or as the certification budget decreases to $1/2$.
@@ -39,7 +39,7 @@ For each fixed $0<\eta<1$, this becomes
 N_*^{(s)}
 =\exp \left[\Theta_{s,M_s,\eta}(\delta^{-1/s})\right],
 \qquad *\in\lbrace {\rm est},{\rm cert}\rbrace ,
-\tag{T3}
+\qquad\text{(T3)}
 ```
 
 with the corresponding budget condition. Thus no fixed finite integer moment alone gives a polynomial guarantee at fixed nonzero loss. At $\eta=1$, the sharper result is $N_*^{(s)}=\Theta(\delta^{-2})$.
@@ -48,7 +48,7 @@ For a varying loss schedule bounded below by $\eta_0$, the uniform law permits a
 
 ```math
 \nu=O \left(\delta^{1/s}\log\frac1\delta\right).
-\tag{T4}
+\qquad\text{(T4)}
 ```
 
 If the ratio in (T4) tends to infinity, the copy count is superpolynomial. If that ratio is merely unbounded, no single polynomial bound covers the full schedule, and a superpolynomial subsequence follows.
@@ -59,7 +59,7 @@ For comparison, an exponential-moment class is
 \mathcal S_{R,B}^{\exp}
 =\left\lbrace \rho:\mathrm{Tr}(R^{\hat n}\rho)\leq B\right\rbrace ,
 \qquad R>1,\quad B<\infty.
-\tag{T5}
+\qquad\text{(T5)}
 ```
 
 Section 6 gives an explicit exponent $\gamma_{R,\eta}>0$ for which
@@ -67,18 +67,18 @@ Section 6 gives an explicit exponent $\gamma_{R,\eta}>0$ for which
 ```math
 N_{\rm est}^{\exp}
 =O_{R,B,\eta} \left(\delta^{-2/\gamma_{R,\eta}}\right).
-\tag{T6}
+\qquad\text{(T6)}
 ```
 
 This yields the same upper order for prescribed-origin certification, by estimating parity more accurately and thresholding. There is no claim that $2/\gamma_{R,\eta}$ is optimal. A stronger exponential promise also allows the familiar unbiased inverse estimator to attain a parametric $O(\delta^{-2})$ upper; Section 7 states a sufficient condition.
 
-## 2. An $s$-th derivative continuity bound
+## 2. A continuity bound for derivatives of order $s$
 
-Write $p_n=\langle n|\rho|n\rangle$, let $P(z)=\sum_n p_nz^n$, and let $T_\eta p$ be the received photon-count law. Take two inputs $p,\widetilde p$ with $s$-th moments at most $M_s$, and suppose
+Write $p_n=\langle n|\rho|n\rangle$, let $P(z)=\sum_n p_nz^n$, and let $T_\eta p$ be the received photon-count law. Take two inputs $p,\widetilde p$ with moments of order $s$ at most $M_s$, and suppose
 
 ```math
 \Vert T_\eta p-T_\eta\widetilde p\Vert _1\leq\epsilon.
-\tag{T7}
+\qquad\text{(T7)}
 ```
 
 Set $f=P-\widetilde P$. Since $n^{\underline s}\leq n^s$,
@@ -87,12 +87,12 @@ Set $f=P-\widetilde P$. Since $n^{\underline s}\leq n^s$,
 \sum_n n^{\underline s}|p_n-\widetilde p_n|\leq2M_s,
 \qquad
 |f^{(s)}(z)|\leq2M_s\quad(|z|\leq1).
-\tag{T8}
+\qquad\text{(T8)}
 ```
 
 The derivative series through order $s$ converge uniformly on the closed unit disk. In particular, the derivatives used below have continuous boundary values; no extension across the unit circle is being assumed.
 
-The loss relation $Q(w)=P(1-\eta+\eta w)$ makes $|f|\leq\epsilon$ on the observed disk with center $c=\nu$ and radius $\eta$. Choose $0<h<\eta$ and define
+The loss relation $Q(w)=P(1-\eta+\eta w)$ makes $|f|\leq\epsilon$ on the observed disk with center $c=\nu$ and radius $\eta$. Choose $0\lt h<\eta$ and define
 
 ```math
 r=\eta-h,\qquad
@@ -104,7 +104,7 @@ x_0=c-r,\qquad
 \kappa_\eta(h)
 =\frac{\eta}
 {(2-\eta)\log[(2-\eta)/(\eta-h)]}.
-\tag{T9}
+\qquad\text{(T9)}
 ```
 
 On the smaller disk $|z-c|\leq r$, Cauchy's estimate gives
@@ -112,24 +112,24 @@ On the smaller disk $|z-c|\leq r$, Cauchy's estimate gives
 ```math
 |f^{(j)}(z)|\leq\frac{j!\epsilon}{h^j},
 \qquad 0\leq j\leq s.
-\tag{T10}
+\qquad\text{(T10)}
 ```
 
-If a radius-$h$ Cauchy circle touches the unit circle, apply the estimate at every smaller radius and take its limit. This is justified by the continuity just established.
+If a Cauchy circle of radius $h$ touches the unit circle, apply the estimate at every smaller radius and take its limit. This is justified by the continuity just established.
 
-Let $\omega$ be the harmonic measure of the inner boundary in the unit disk with the closed radius-$r$ disk removed. The Green-function barrier proved in [recovery.md](recovery.md), equations (R16)–(R20), gives
+Let $\omega$ be the harmonic measure of the inner boundary in the unit disk with the closed disk of radius $r$ removed. The Green-function barrier proved in [recovery.md](recovery.md), equations (R16)–(R20), gives
 
 ```math
 \omega(x)\geq\kappa_\eta(h)(1+x),
 \qquad -1\leq x\leq x_0.
-\tag{T11}
+\qquad\text{(T11)}
 ```
 
 Suppose
 
 ```math
 L_s=\log\frac{2M_sh^s}{s!\epsilon}>0.
-\tag{T12}
+\qquad\text{(T12)}
 ```
 
 Applying the two-constants theorem to the subharmonic function $\log|f^{(s)}|$, with (T8) and (T10) as its two boundary bounds, gives
@@ -137,7 +137,7 @@ Applying the two-constants theorem to the subharmonic function $\log|f^{(s)}|$, 
 ```math
 |f^{(s)}(x)|
 \leq 2M_s e^{-\kappa_\eta(h)(1+x)L_s}.
-\tag{T13}
+\qquad\text{(T13)}
 ```
 
 Zeros of the derivative cause no difficulty in this subharmonic argument. An identically zero derivative satisfies the displayed conclusion directly.
@@ -162,10 +162,10 @@ Taylor's theorem with an integral remainder, expanded from $x_0$ toward $-1$, no
 +\frac{2M_s}{[\kappa_\eta(h)L_s]^s}.
 }
 \end{aligned}
-\tag{T14}
+\qquad\text{(T14)}
 ```
 
-The remainder kernel is the distance from the target endpoint $-1$, not the distance from the expansion point. This is what turns the continued $s$-th derivative into the power $[\log(1/\epsilon)]^{-s}$.
+The remainder kernel is the distance from the target endpoint $-1$, not the distance from the expansion point. This is what turns the continued derivative of order $s$ into the power $[\log(1/\epsilon)]^{-s}$.
 
 For fixed $\eta$, taking $h=\eta/2$ shows
 
@@ -177,7 +177,7 @@ O_{s,\eta}(\epsilon)
 \frac{M_s}{[\log(M_s/\epsilon)]^s}
 \right)
 \quad\text{as }\epsilon\downarrow0.
-\tag{T15}
+\qquad\text{(T15)}
 ```
 
 When the output distance is zero, injectivity of thinning gives $p=\widetilde p$ directly. The logarithmic expressions are unnecessary in that case.
@@ -206,7 +206,7 @@ h=\min\left\lbrace \frac\eta2,\max\lbrace \nu,b\rbrace \right\rbrace ,
 C_0=1+\frac4{\eta_0},
 \qquad
 A_{s,\eta_0}=\sum_{j=0}^{s-1}C_0^j.
-\tag{T16}
+\qquad\text{(T16)}
 ```
 
 Here $b\leq\eta_0/4$, $h\geq b$, $h\leq\nu+b$, and $\eta-h\geq\eta/2$. Furthermore,
@@ -217,7 +217,7 @@ Here $b\leq\eta_0/4$, $h\geq b$, $h\leq\nu+b$, and $\eta-h\geq\eta/2$. Furthermo
 \frac1\kappa
 \leq\frac{8\nu+4h}{\eta_0^2}
 \leq\frac{12(\nu+b)}{\eta_0^2}.
-\tag{T17}
+\qquad\text{(T17)}
 ```
 
 For the first inequality, either $h\geq\nu$ or $h=\eta/2$. For the second, use
@@ -233,7 +233,7 @@ Choose
 -\frac{(8M_s/\delta)^{1/s}}{\kappa}
 \right].
 }
-\tag{T18}
+\qquad\text{(T18)}
 ```
 
 Since $2M_sh^s\geq\delta/4$, this choice satisfies
@@ -249,7 +249,7 @@ The second term in (T14) is therefore at most $\delta/4$. The first is at most $
 \Vert T_\eta p-T_\eta\widetilde p\Vert _1\leq\epsilon_*
 \quad\Longrightarrow\quad
 |\theta(p)-\theta(\widetilde p)|\leq\delta/2.
-\tag{T19}
+\qquad\text{(T19)}
 ```
 
 The tolerance also has the explicit lower bound
@@ -263,7 +263,7 @@ The tolerance also has the explicit lower bound
 -\frac{12}{\eta_0^2}
 \nu\left(\frac{8M_s}{\delta}\right)^{1/s}
 \right].
-\tag{T20}
+\qquad\text{(T20)}
 ```
 
 Consequently, any count-distribution estimator costing a fixed polynomial in $1/\epsilon_*$ gives
@@ -272,7 +272,7 @@ Consequently, any count-distribution estimator costing a fixed polynomial in $1/
 \log N
 =O_{s,M_s,\eta_0}
 \left(\log\frac1\delta+\nu\delta^{-1/s}\right).
-\tag{T21}
+\qquad\text{(T21)}
 ```
 
 The next section supplies such an estimator without assuming finite input support. At $\eta=1$, direct parity measurement supplies the stated upper more simply.
@@ -283,7 +283,7 @@ This section makes the truncation, probability of success, and optimization size
 
 ### Estimating the received distribution
 
-The $s$-th input moment implies
+The input moment of order $s$ implies
 
 ```math
 \mathbb E n\leq E_1:=M_s^{1/s},
@@ -291,7 +291,7 @@ The $s$-th input moment implies
 \mathbb E K\leq E_1,
 \qquad
 \mathbb E K^s\leq M_s,
-\tag{T22}
+\qquad\text{(T22)}
 ```
 
 where $K$ is the received count. The first inequality is the moment inequality for a probability law. The last follows by coupling the thinning so that $K\leq n$.
@@ -310,7 +310,7 @@ For the full empirical distribution $\widehat q$ of $N$ count samples and any in
 \qquad
 H_J=\sum_{k=1}^J\frac1k.
 \end{aligned}
-\tag{T23}
+\qquad\text{(T23)}
 ```
 
 The first line uses the binomial variance bound for each frequency and a direct tail bound; the second uses Cauchy–Schwarz with weights $k$.
@@ -325,14 +325,14 @@ N\geq
 \frac{24^2}{\epsilon^2}
 (1+\sqrt{E_1H_J})^2
 \right\rceil.
-\tag{T24}
+\qquad\text{(T24)}
 ```
 
 Then $\mathbb E\Vert \widehat q-q\Vert _1\leq\epsilon/12$, so Markov's inequality gives
 
 ```math
 \Pr\lbrace \Vert \widehat q-q\Vert _1>\epsilon/4\rbrace \leq1/3.
-\tag{T25}
+\qquad\text{(T25)}
 ```
 
 For $s\geq2$, the logarithmic prefactor can be removed: Cauchy–Schwarz gives
@@ -350,7 +350,7 @@ N\geq
 \frac{144}{\epsilon^2}
 (1+\sqrt{M_s\zeta(s)})^2
 \right\rceil
-\tag{T26}
+\qquad\text{(T26)}
 ```
 
 also implies (T25). These estimates are deliberately elementary. They are sufficient for the copy orders claimed here.
@@ -363,7 +363,7 @@ Set
 M=\left\lceil
 \left(\frac{16M_s}{\epsilon}\right)^{1/s}
 \right\rceil.
-\tag{T27}
+\qquad\text{(T27)}
 ```
 
 For a true input $p$, move all its mass above $M$ to zero and call the result $p^{[M]}$. This is an allowed finite-support probability law because the moment decreases. Moreover,
@@ -373,12 +373,12 @@ For a true input $p$, move all its mass above $M$ to zero and call the result $p
 =2\sum_{n>M}p_n
 \leq\frac{2M_s}{(M+1)^s}
 \leq\epsilon/8.
-\tag{T28}
+\qquad\text{(T28)}
 ```
 
 Thinning contracts $\ell_1$, so the same upper bound holds between the two output laws. The input tail is never passed through an unbounded algebraic inverse.
 
-The physical measurement may have only $M+2$ outcomes: photon counts $0,\ldots,M$ and one overflow outcome $*$. Let $\widehat q_0,\ldots,\widehat q_M,\widehat q_*$ be their frequencies. The empirical bound (T25) remains valid for this coarsened law, because coarsening contracts $\ell_1$. The full empirical law in the proof is only a convenient theoretical refinement of this finite measurement.
+The physical measurement may have only $M+2$ outcomes: photon counts $0,\ldots,M$ and one overflow outcome $\ast$. Let $\widehat q_0,\ldots,\widehat q_M,\widehat q_{\ast}$ be their frequencies. The empirical bound (T25) remains valid for this coarsened law, because coarsening contracts $\ell_1$. The full empirical law in the proof is only a convenient theoretical refinement of this finite measurement.
 
 Find any vector $u=(u_0,\ldots,u_M)$ satisfying the finite linear constraints
 
@@ -391,9 +391,9 @@ u_n\geq0,\qquad
 ```math
 \sum_{k=0}^M
 \left|(T_\eta u)_k-\widehat q_k\right|
-+\widehat q_*
++\widehat q_{\ast}
 \leq\epsilon/2.
-\tag{T29}
+\qquad\text{(T29)}
 ```
 
 Absolute values are implemented with nonnegative slack variables. A deterministic linear-program rule can select a feasible vector. On infeasibility, return any value in $[-1,1]$.
@@ -404,7 +404,7 @@ On the event (T25), $p^{[M]}$ has residual at most $3\epsilon/8$, so the constra
 \Vert T_\eta u-T_\eta p\Vert _1
 \leq\epsilon/2+\epsilon/4
 =3\epsilon/4<\epsilon.
-\tag{T30}
+\qquad\text{(T30)}
 ```
 
 This is a full, uncoarsened output distance: the candidate output has no mass above $M$, so its distance to the true output tail equals the single true overflow probability. Thus no unknown composition of that overflow is being discarded in (T30).
@@ -416,18 +416,18 @@ N=
 O \left(
 \frac{1+E_1\log(1+E_1/\epsilon_*)}{\epsilon_*^2}
 \right),
-\tag{T31}
+\qquad\text{(T31)}
 ```
 
-or the sharper fixed-$s\geq2$ expression in (T26). Equations (T20) and (T31) prove the upper half of (T2).
+or the sharper expression for fixed $s\geq2$ in (T26). Equations (T20) and (T31) prove the upper half of (T2).
 
 For certification, run the estimator with requested accuracy $\delta/3$ and threshold at $-\delta/2$. Global Wigner positivity implies nonnegative origin parity; the alternative has parity at most $-\delta$. Both errors are therefore at most $1/3$. Repeating independent fixed-confidence procedures and taking a median, or a majority for testing, raises the confidence to $1-\beta$ with an additional $O(\log(1/\beta))$ copy factor.
 
-This is a finite sample construction, not a practical efficiency claim in the difficult regime. The input cutoff (T27) itself can be stretched exponential in $1/\delta$ at fixed loss. The linear program has $O(M)$ variables and constraints and a thinning matrix of at most $(M+1)^2$ entries. No exact bit-complexity bound, numerical conditioning guarantee, or polynomial-in-$1/\delta$ runtime is asserted for finite moment classes.
+This is a finite sample construction, not a practical efficiency claim in the difficult regime. The input cutoff (T27) itself can be stretched exponential in $1/\delta$ at fixed loss. The linear program has $O(M)$ variables and constraints and a thinning matrix of at most $(M+1)^2$ entries. No exact bit-complexity bound, numerical conditioning guarantee, or runtime polynomial in $1/\delta$ is asserted for finite moment classes.
 
 ## 5. Matching lower bounds for every collective measurement
 
-Use the binomial and odd-conditioned distributions $b_m,o_m$ from [limits.md](limits.md). For $m>s$, both have the same first $s$ moments and common $s$-th moment
+Use the binomial and odd-conditioned distributions $b_m,o_m$ from [limits.md](limits.md). For $m>s$, both have the same first $s$ moments and common moment of order $s$
 
 ```math
 \mu_s(m)=\mathbb E_{b_m}n^s
@@ -456,7 +456,7 @@ N>
 \left(\frac{2-\eta}{\eta}\right)^m,
 \qquad
 c_{\rm LC}=\log(5/4),
-\tag{T32}
+\qquad\text{(T32)}
 ```
 
 for any test with both errors at most $1/3$. All inputs used here are diagonal, so an arbitrary joint quantum measurement cannot improve their distinguishability beyond the classical count experiment.
@@ -470,7 +470,7 @@ w=4\delta,\qquad
 m=\left\lfloor
 \left(\frac{M_s}{4\delta}\right)^{1/s}
 \right\rfloor.
-\tag{T33}
+\qquad\text{(T33)}
 ```
 
 For example, the conditions
@@ -480,7 +480,7 @@ For example, the conditions
 \min\left\lbrace \frac18,\frac{M_s}{4(s+1)^s}\right\rbrace
 ```
 
-ensure $w\leq1/2$ and $m>s$. Both moments are at most $wm^s\leq M_s$, and their parities differ by $4\delta$. Midpoint thresholding of a successful $\delta$-accurate estimator therefore gives a test to which (T32) applies:
+ensure $w\leq1/2$ and $m>s$. Both moments are at most $wm^s\leq M_s$, and their parities differ by $4\delta$. Midpoint thresholding of a successful estimator with accuracy $\delta$ therefore gives a test to which (T32) applies:
 
 ```math
 \boxed{
@@ -490,7 +490,7 @@ N_{\rm est}^{(s)}
 \left(\frac{2-\eta}{\eta}\right)^{
 \left\lfloor(M_s/(4\delta))^{1/s}\right\rfloor}.
 }
-\tag{T34}
+\qquad\text{(T34)}
 ```
 
 ### Globally positive null
@@ -504,7 +504,7 @@ w=\delta,\qquad
 m=\left\lfloor
 \left(\frac{M_s-1/2}{\delta}\right)^{1/s}
 \right\rfloor.
-\tag{T35}
+\qquad\text{(T35)}
 ```
 
 For
@@ -514,7 +514,7 @@ For
 \min\left\lbrace \frac12,\frac{M_s-1/2}{(s+1)^s}\right\rbrace ,
 ```
 
-the two mixtures have equal $s$-th moments bounded by
+the two mixtures have equal moments of order $s$ bounded by
 
 ```math
 (1-\delta)\frac12+\delta\mu_s(m)
@@ -531,7 +531,7 @@ N_{\rm cert}^{(s)}
 \left(\frac{2-\eta}{\eta}\right)^{
 \left\lfloor((M_s-1/2)/\delta)^{1/s}\right\rfloor}.
 }
-\tag{T36}
+\qquad\text{(T36)}
 ```
 
 The lower exponent explicitly uses the slack $M_s-1/2$. The upper uses $M_s$. Their matching statement fixes a budget strictly above $1/2$, rather than asserting a uniform law as that slack vanishes.
@@ -553,7 +553,7 @@ N_{\rm est}^{(s)}
 N_{\rm cert}^{(s)}
 >\frac{c_{\rm LC}}{\delta^2}
 \quad(M_s>1/2).
-\tag{T37}
+\qquad\text{(T37)}
 ```
 
 Finally,
@@ -571,7 +571,7 @@ Combining (T34) or (T36) with (T37) proves the lower half of (T2). The maximum o
 
 If a separate mean budget $E$ is also imposed and $s>1$, the same lower order persists for fixed $E>0$ in estimation and fixed $E>1/2$ in certification. Indeed, the estimation construction has mean $O(\delta^{1-1/s})\to0$, and the certification construction has mean $1/2+O(\delta^{1-1/s})\to1/2$.
 
-More generally, finitely many fixed moment bounds through order $s$ do not remove the hard family if the lower-order budgets are strictly positive for estimation, or strictly greater than $1/2$ for certification. For $j<s$, its additional $j$-th moment is of order $\delta m^j=O(\delta^{1-j/s})$. The highest-moment upper remains valid, and the lower-order constraints are eventually satisfied. Constants and the required accuracy threshold can depend on every supplied budget.
+More generally, finitely many fixed moment bounds through order $s$ do not remove the hard family if the lower-order budgets are strictly positive for estimation, or strictly greater than $1/2$ for certification. For $j\lt s$, its additional moment of order $j$ is of order $\delta m^j=O(\delta^{1-j/s})$. The highest-moment upper remains valid, and the lower-order constraints are eventually satisfied. Constants and the required accuracy threshold can depend on every supplied budget.
 
 ## 6. Exponential moments: a polynomial constructive upper
 
@@ -581,18 +581,18 @@ Suppose $R>1$ and
 \sum_n R^np_n\leq B.
 ```
 
-For two allowed inputs, $f=P-\widetilde P$ is analytic on $|z|<R$, continuous on its closure, and bounded there by $2B$. The observed disk $D=\lbrace z:|z-c|\leq\eta\rbrace$, with $c=1-\eta$, is strictly inside that larger disk because $c+\eta=1<R$.
+For two allowed inputs, $f=P-\widetilde P$ is analytic on $|z|\lt R$, continuous on its closure, and bounded there by $2B$. The observed disk $D=\lbrace z:|z-c|\leq\eta\rbrace$, with $c=1-\eta$, is strictly inside that larger disk because $c+\eta=1\lt R$.
 
-If $0<\eta<1$, the parity point $-1$ lies between the two boundary circles. Let $\omega_R$ be harmonic measure of the inner boundary in $\lbrace |z|<R\rbrace \setminus D$. The two-constants theorem gives
+If $0<\eta<1$, the parity point $-1$ lies between the two boundary circles. Let $\omega_R$ be harmonic measure of the inner boundary in $\lbrace |z|\lt R\rbrace \setminus D$. The two-constants theorem gives
 
 ```math
 |f(-1)|
 \leq(2B)^{1-\omega_R(-1)}\epsilon^{\omega_R(-1)}
 \quad\text{if }\Vert T_\eta p-T_\eta\widetilde p\Vert _1\leq\epsilon\leq2B.
-\tag{T38}
+\qquad\text{(T38)}
 ```
 
-An explicit barrier makes this quantitative. The radius-$R$ disk Green function with pole at $c$ is
+An explicit barrier makes this quantitative. The Green function of the disk of radius $R$ with pole at $c$ is
 
 ```math
 g_R(z)=
@@ -618,7 +618,7 @@ The maximum principle implies $\omega_R\geq g_R/\mathcal M_R$. Evaluating at the
 \log[(R^2+c)/(R\eta)]
 }
 \leq\omega_R(-1).
-\tag{T39}
+\qquad\text{(T39)}
 ```
 
 Both logarithms are positive, and $0<\gamma_{R,\eta}<1$ for $\eta<1$. Since $\epsilon/(2B)\leq1$, (T38) yields the explicit Hölder modulus
@@ -630,7 +630,7 @@ Both logarithms are positive, and $0<\gamma_{R,\eta}<1$ for $\eta<1$. Since $\ep
 (2B)^{1-\gamma_{R,\eta}}
 \epsilon^{\gamma_{R,\eta}}.
 }
-\tag{T40}
+\qquad\text{(T40)}
 ```
 
 The displayed exponent is a lower bound on harmonic measure obtained from a simple barrier, not an optimized exponent. At $\eta=1$, the formula has $\gamma_{R,1}=1$, and the direct bound $|f(-1)|\leq\epsilon$ applies. The exponent increases with $\eta$: as $c$ increases, the numerator in (T39) decreases and its positive denominator increases. Thus $\eta\geq\eta_0>0$ gives a uniform positive exponent $\gamma_{R,\eta_0}$.
@@ -640,7 +640,7 @@ Choose
 ```math
 \epsilon_*=
 2B\left(\frac{\delta}{4B}\right)^{1/\gamma_{R,\eta}}.
-\tag{T41}
+\qquad\text{(T41)}
 ```
 
 For $0<\delta\leq1$ and $B\geq1$, this satisfies $\epsilon_*\leq\delta/2$, and (T40) makes the parity modulus at most $\delta/2$.
@@ -671,7 +671,7 @@ The empirical output distribution therefore obeys
 \mathbb E\Vert \widehat q-q\Vert _1
 \leq
 \sqrt{\frac{BR}{(R-1)N}}.
-\tag{T42}
+\qquad\text{(T42)}
 ```
 
 With $\epsilon=\epsilon_*$, take
@@ -685,7 +685,7 @@ N\geq
 M=\left\lceil
 \frac{\log(16B/\epsilon)}{\log R}
 \right\rceil.
-\tag{T43}
+\qquad\text{(T43)}
 ```
 
 The empirical $\ell_1$ error is then at most $\epsilon/4$ with probability at least $2/3$. Moving the input tail above $M$ to zero changes it by at most
@@ -700,7 +700,7 @@ Use the same finite count-plus-overflow measurement and linear program as in (T2
 
 ```math
 \sum_{n=0}^{M}R^nu_n\leq B.
-\tag{T44}
+\qquad\text{(T44)}
 ```
 
 Tail transfer to zero decreases this exponential moment. The feasibility and full-output-distance proof (T28)–(T30) is unchanged. Equation (T40) then gives a valid parity estimator with
@@ -709,7 +709,7 @@ Tail transfer to zero decreases this exponential moment. The feasibility and ful
 N=O_{R,B,\eta} \left(\delta^{-2/\gamma_{R,\eta}}\right),
 \qquad
 M=O_{R,B,\eta} \left(\log\frac1\delta\right).
-\tag{T45}
+\qquad\text{(T45)}
 ```
 
 For $\eta\geq\eta_0$, use $\gamma_{R,\eta_0}$ for a uniform polynomial upper. The optimization has only $O(\log(1/\delta))$ variables and constraints for fixed parameters, besides the work of acquiring and recording the samples. As elsewhere, this does not assert an optimal runtime or an exact bit-complexity bound for real-valued known transmission.
@@ -720,7 +720,7 @@ The ordinary inverse-loss parity weight on a received photon count is
 
 ```math
 g_\eta(k)=\left(1-\frac2\eta\right)^k.
-\tag{T46}
+\qquad\text{(T46)}
 ```
 
 Its rapidly increasing magnitude under loss, and the resulting variance problem, are classical photodetection facts; see [Ban99](../references/REFERENCES.md#ban99), Section III and Eqs. (20)–(22). They do not by themselves prove a minimax converse for regularized or nonlinear estimators.
@@ -729,7 +729,7 @@ If the known exponential promise satisfies
 
 ```math
 R\geq R_{\rm var}(\eta):=\frac4\eta-3,
-\tag{T47}
+\qquad\text{(T47)}
 ```
 
 then this particular inverse estimator has controlled second moment:
@@ -739,7 +739,7 @@ then this particular inverse estimator has controlled second moment:
 =P \left(1-\eta+\eta(1-2/\eta)^2\right)
 =P(4/\eta-3)
 \leq B.
-\tag{T48}
+\qquad\text{(T48)}
 ```
 
 Absolute integrability also holds. Indeed,
@@ -766,7 +766,7 @@ Condition (T47) is sufficient for this unbiased estimator. It is not asserted to
 
 ## 8. Budgets, endpoints, and the scope of the conclusions
 
-- **Moment nontriviality.** At $M_s=0$, the input is vacuum. Since $n^s\geq\mathbf 1_{\lbrace n\ {\rm odd}\rbrace }$, an origin-negative gap $\delta$ is possible under the $s$-th moment promise exactly when $M_s\geq(1+\delta)/2$. A vacuum/one-photon mixture attains that threshold. Fixed-budget certification therefore requires $M_s>1/2$ as $\delta\downarrow0$.
+- **Moment nontriviality.** At $M_s=0$, the input is vacuum. Since $n^s\geq\mathbf 1_{\lbrace n\ {\rm odd}\rbrace }$, an origin-negative gap $\delta$ is possible under the moment promise of order $s$ exactly when $M_s\geq(1+\delta)/2$. A vacuum/one-photon mixture attains that threshold. Fixed-budget certification therefore requires $M_s>1/2$ as $\delta\downarrow0$.
 - **Exponential nontriviality.** The class is empty if $B<1$, and consists only of vacuum if $B=1$. Moreover $R^n\geq1+(R-1)\mathbf 1_{\lbrace n\ {\rm odd}\rbrace }$. The origin-negative alternative is nonempty exactly when $B\geq(1+R)/2+(R-1)\delta/2$, again attained by a vacuum/one-photon mixture. A fixed nontrivial certification class requires $B>(1+R)/2$.
 - **An implied mean bound.** The integer-moment promise gives mean at most $M_s^{1/s}$. The exponential promise gives mean at most $\log B/\log R$ by Jensen's inequality. These facts justify using moment-class inputs in finite count estimation; they do not turn the main mean-only theorem into a stronger-tail statement.
 - **Compact sublevel classes.** The diagonal moment classes are compact in $\ell_1$, using uniform tails $M_s/(M+1)^s$ or $BR^{-(M+1)}$ and Fatou's lemma for closedness. Equality of a moment to a specified budget need not define a closed class. The upper constructions use inequalities throughout.

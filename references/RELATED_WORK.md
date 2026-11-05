@@ -25,7 +25,7 @@ That paper establishes the central physical instability. Here the question is th
 
 ## 2. Noisy Wigner minimax theory uses a different uniform promise
 
-[Butucea–Guţă–Artiles](REFERENCES.md#bga07) study inefficient random-phase homodyne observations. Their fixed classes $\mathcal A(\beta,r,L)$, $0<r\le2$, impose an exponentially weighted Fourier-square bound. Section 3 connects such regularity with photon moments of the form $\mathrm{Tr}\rho\exp(a\hat n^{r/2})<\infty$. Theorem 1 gives pointwise minimax rates through a bias–noise balance; the rate depends on the fixed class parameters.
+[Butucea–Guţă–Artiles](REFERENCES.md#bga07) study inefficient random-phase homodyne observations. Their fixed classes $\mathcal A(\beta,r,L)$, $0\lt r\le2$, impose an exponentially weighted Fourier-square bound. Section 3 connects such regularity with photon moments of the form $\mathrm{Tr}\rho\exp(a\hat n^{r/2})<\infty$. Theorem 1 gives pointwise minimax rates through a bias–noise balance; the rate depends on the fixed class parameters.
 
 A mean bound alone does not place all admissible states in one of those fixed classes. The difficult states here can put probability of order $\delta$ at photon numbers of order $1/\delta$, keeping their mean bounded while stronger moments grow. Letting the smoothness parameter tend to zero in the earlier theorem does not supply a uniform theorem for this class. Moreover, its lower bound concerns estimators of homodyne data; an all-measurement converse requires a separate argument. Regularization, minimax analysis, and severe inverse instability themselves are established ingredients.
 
