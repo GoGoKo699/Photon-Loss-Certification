@@ -8,15 +8,15 @@ This project determines the optimal copy cost of recovering a single-mode source
 
 Let $E$ be the fixed mean source photon-number bound, $\eta$ the transmissivity, and $\delta$ the required input-parity accuracy. For $E>0$ and transmissivity bounded below by a positive constant,
 
-$$
+```math
 \log N_{\rm est}
-=\Theta_{E,\eta_0}\!\left(
+=\Theta_{E,\eta_0} \left(
 \log\frac1\delta+\frac{1-\eta}{\delta}
 \right),
 \qquad \eta\in[\eta_0,1].
-$$
+```
 
-At any fixed $0<\eta<1$, this is an exponential copy cost in $1/\delta$. At $\eta=1$, direct parity measurement has the usual quadratic cost. For fixed $E>1/2$, the same order holds for distinguishing a globally Wigner-positive state from a state with input parity at most $-\delta$ at the origin. The convention is $W_\rho(0)=2\operatorname{Tr}(\Pi\rho)/\pi$.
+At any fixed $0<\eta<1$, this is an exponential copy cost in $1/\delta$. At $\eta=1$, direct parity measurement has the usual quadratic cost. For fixed $E>1/2$, the same order holds for distinguishing a globally Wigner-positive state from a state with input parity at most $-\delta$ at the origin. The convention is $W_\rho(0)=2\mathrm{Tr}(\Pi\rho)/\pi$.
 
 | Question | Answer and proof route |
 |---|---|

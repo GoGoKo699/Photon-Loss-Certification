@@ -8,7 +8,7 @@ The source comparisons are in [Related work](RELATED_WORK.md). Citation keys bel
 
 Antoine Royer, **Wigner function as the expectation value of a parity operator**, *Physical Review A* **15**, 449–450 (1977). [Publisher and DOI](https://doi.org/10.1103/PhysRevA.15.449).
 
-The displaced-parity interpretation of the Wigner function. Numerical prefactors depend on phase-space conventions; this repository uses $W_\rho(0)=(2/\pi)\operatorname{Tr}[(-1)^{\hat n}\rho]$.
+The displaced-parity interpretation of the Wigner function. Numerical prefactors depend on phase-space conventions; this repository uses $W_\rho(0)=(2/\pi)\mathrm{Tr}[(-1)^{\hat n}\rho]$.
 
 ### Ban99
 

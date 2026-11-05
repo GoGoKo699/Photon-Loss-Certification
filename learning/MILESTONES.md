@@ -13,7 +13,7 @@ Throughout, $\hat n$ is photon number, $N$ counts consumed copies, $\eta$ is kno
 ### M01. Photon number and state
 
 - **Central question:** What information does a single mode's photon-number distribution contain?
-- **Understanding target:** Connect the Fock basis, a normalized density operator, the probabilities $p_n$, and the mean $\operatorname{Tr}(\hat n\rho)$. Distinguish a general state from its diagonal photon statistics; allowing coherence does not remove the usefulness of those statistics.
+- **Understanding target:** Connect the Fock basis, a normalized density operator, the probabilities $p_n$, and the mean $\mathrm{Tr}(\hat n\rho)$. Distinguish a general state from its diagonal photon statistics; allowing coherence does not remove the usefulness of those statistics.
 - **Dependencies and story role:** None within this map; establishes the local physical objects.
 - **Conceptual connection:** Operator expectations become probability functionals when the measured observable is diagonal.
 - **Sources:** L97 §2.2.2; [Model: state, energy and channel](../science/model.md).
@@ -53,7 +53,7 @@ Throughout, $\hat n$ is photon number, $N$ counts consumed copies, $\eta$ is kno
 ### M06. What a photon-tail promise guarantees
 
 - **Central question:** What does a mean bound exclude, and what does it allow?
-- **Understanding target:** For an integer cutoff $M\ge0$, use the tail bound $\Pr\{n>M\}\le E/(M+1)$ while recognizing that arbitrarily large counts remain possible. Separate a mean bound, a fixed higher moment, an exponential moment, and a hard support cutoff; these define different uniform state classes.
+- **Understanding target:** For an integer cutoff $M\ge0$, use the tail bound $\Pr\lbrace n>M\rbrace \le E/(M+1)$ while recognizing that arbitrarily large counts remain possible. Separate a mean bound, a fixed higher moment, an exponential moment, and a hard support cutoff; these define different uniform state classes.
 - **Dependencies and story role:** M01, M05; identifies the source information that controls difficulty.
 - **Conceptual connection:** Rare high-photon events can respect an average budget while defeating stronger regularity assumptions.
 - **Sources:** [Model](../science/model.md); [Interpretation: a rare component](../science/interpretation.md).
@@ -223,7 +223,7 @@ Throughout, $\hat n$ is photon number, $N$ counts consumed copies, $\eta$ is kno
 ### M27. Exponential tails and an interior target
 
 - **Central question:** Why does an exponential photon moment permit polynomial recovery?
-- **Understanding target:** Explain how $\operatorname{Tr}(R^{\hat n}\rho)\le B$, $R>1$, makes $-1$ interior to a larger analytic domain. The Hölder exponent gives a polynomial upper, not an optimal exponent; $R\ge4/\eta-3$ is sufficient for a parametric rate. Here $B=1$ permits only vacuum, and fixed-budget nontrivial certification requires $B>(1+R)/2$.
+- **Understanding target:** Explain how $\mathrm{Tr}(R^{\hat n}\rho)\le B$, $R>1$, makes $-1$ interior to a larger analytic domain. The Hölder exponent gives a polynomial upper, not an optimal exponent; $R\ge4/\eta-3$ is sufficient for a parametric rate. Here $B=1$ permits only vacuum, and fixed-budget nontrivial certification requires $B>(1+R)/2$.
 - **Dependencies and story role:** M09–M12, M25, M26; locates the boundary of the finite-moment conclusion.
 - **Conceptual connection:** Enlarging an analytic domain changes the type of stability available.
 - **Sources:** [Tail promises §§6–8](../science/tail-promises.md).

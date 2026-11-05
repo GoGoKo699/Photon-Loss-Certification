@@ -6,12 +6,12 @@ The main result is a worst-case statement about what this promise guarantees. Bo
 
 ## State, energy and channel
 
-Let the single-mode Fock space have basis $\{|n\rangle:n\geq 0\}$, number operator $\hat n$, and parity operator $\Pi=(-1)^{\hat n}$. The unknown source state belongs to
+Let the single-mode Fock space have basis $\lbrace |n\rangle:n\geq 0\rbrace$, number operator $\hat n$, and parity operator $\Pi=(-1)^{\hat n}$. The unknown source state belongs to
 
-$$
-\mathcal S_E=\{\rho\geq0:\operatorname{Tr}\rho=1,\quad
-\operatorname{Tr}(\hat n\rho)\leq E\}.
-$$
+```math
+\mathcal S_E=\lbrace \rho\geq0:\mathrm{Tr}\rho=1,\quad
+\mathrm{Tr}(\hat n\rho)\leq E\rbrace .
+```
 
 The bound $E$ is supplied to the procedure. No Gaussian, finite-support or exponential-tail assumption is made. States in this class can have small probability at arbitrarily large photon number. Coherence in the Fock basis is allowed.
 
@@ -25,36 +25,36 @@ These assumptions separate statistical recovery from protection during transmiss
 
 Write $p_n=\langle n|\rho|n\rangle$. The received photon-count law is
 
-$$
+```math
 q_k=(T_\eta p)_k
 =\sum_{n=k}^\infty\binom nk\eta^k(1-\eta)^{n-k}p_n.
-$$
+```
 
 This formula holds even if the source has off-diagonal coherences. For example, the loss Kraus operators map $|n\rangle$ to a multiple of $|n-\ell\rangle$ when $\ell$ photons are lost; a diagonal output matrix element receives contributions only from diagonal input elements. In particular,
 
-$$
+```math
 \sum_k kq_k=\eta\sum_n np_n\leq\eta E.
-$$
+```
 
 For the probability generating functions $P(z)=\sum_n p_nz^n$ and $Q(z)=\sum_kq_kz^k$,
 
-$$
+```math
 Q(z)=P(1-\eta+\eta z),\qquad |z|\leq1.
-$$
+```
 
 The target is
 
-$$
-\theta(\rho)=\operatorname{Tr}(\Pi\rho)=P(-1).
-$$
+```math
+\theta(\rho)=\mathrm{Tr}(\Pi\rho)=P(-1).
+```
 
 Use the quantum-optical convention
 
-$$
+```math
 W_\rho(\alpha)=\frac2\pi
-\operatorname{Tr}\!\left[D(-\alpha)\rho D(\alpha)\Pi\right],
+\mathrm{Tr} \left[D(-\alpha)\rho D(\alpha)\Pi\right],
 \qquad W_\rho(0)=\frac2\pi\theta(\rho).
-$$
+```
 
 Thus an additive parity error $\delta$ corresponds to Wigner-value error $2\delta/\pi$ at the origin. All accuracy statements below use the parity normalization. The same prescribed origin is used throughout the upper and lower bounds.
 
@@ -62,10 +62,10 @@ Thus an additive parity error $\delta$ corresponds to Wigner-value error $2\delt
 
 For $0<\delta<1$ and failure probability $0<\beta<1/2$, define $N_{\rm est}(E,\eta,\delta,\beta)$ as the smallest integer $N$ for which an output measurement and estimator $\widehat\theta$ obey
 
-$$
+```math
 \sup_{\rho\in\mathcal S_E}
-\Pr_\rho\{|\widehat\theta-\theta(\rho)|>\delta\}\leq\beta.
-$$
+\Pr_\rho\lbrace |\widehat\theta-\theta(\rho)|>\delta\rbrace \leq\beta.
+```
 
 The minimization is over all procedures using at most $N$ received copies. A fixed-budget collective POVM subsumes adaptive and randomized output procedures with the same worst-case budget. The estimator may be biased. The resource is copies, not arithmetic operations or a restriction to a linear inverse estimator.
 
@@ -75,20 +75,20 @@ Unless explicitly displayed, confidence is fixed at $1-\beta=2/3$. The recovery 
 
 Fix $E>0$ and $0<\eta_0\leq1$. There are positive constants $c,C,\delta_0$, depending only on $E,\eta_0$, such that for every $0<\delta<\delta_0$ and every $\eta\in[\eta_0,1]$,
 
-$$
+```math
 c\left[\log\frac1\delta+\frac{1-\eta}{\delta}\right]
 \leq
 \log N_{\rm est}(E,\eta,\delta,1/3)
 \leq
 C\left[\log\frac1\delta+\frac{1-\eta}{\delta}\right].
-$$
+```
 
 For any fixed $0<\eta<1$, this gives
 
-$$
+```math
 N_{\rm est}(E,\eta,\delta,1/3)
-=\exp\!\left[\Theta_{E,\eta}(\delta^{-1})\right].
-$$
+=\exp \left[\Theta_{E,\eta}(\delta^{-1})\right].
+```
 
 At $\eta=1$, direct parity measurement and the parametric lower bound give the sharper statement $N_{\rm est}=\Theta_E(\delta^{-2})$. The uniform logarithmic theorem does not claim the exact exponent of every polynomial in a varying-loss regime, or the leading constant in a fixed-loss exponential.
 
@@ -98,14 +98,14 @@ The hard quantum family is diagonal in the Fock basis. Its received copies commu
 
 For fixed $E>1/2$, consider the promise problem
 
-$$
+```math
 H_0:\quad \rho\in\mathcal S_E,\quad W_\rho(\alpha)\geq0
 \text{ for every }\alpha,
-$$
+```
 
-$$
+```math
 H_1:\quad \rho\in\mathcal S_E,\quad\theta(\rho)\leq-\delta.
-$$
+```
 
 Define $N_{\rm cert}(E,\eta,\delta,\beta)$ as the least fixed copy budget for a test with both worst-case type-I and type-II errors at most $\beta$. States satisfying neither promise impose no requirement on this test. A globally nonnegative Wigner function implies $\theta(\rho)\geq0$, so estimating parity to accuracy $\delta/3$ and thresholding at $-\delta/2$ supplies an upper bound.
 
@@ -113,21 +113,21 @@ Define $N_{\rm cert}(E,\eta,\delta,\beta)$ as the least fixed copy budget for a 
 
 For every fixed $E>1/2$ and $\eta_0>0$, the same uniform logarithmic law holds:
 
-$$
+```math
 \log N_{\rm cert}(E,\eta,\delta,1/3)
-=\Theta_{E,\eta_0}\!\left(
+=\Theta_{E,\eta_0} \left(
 \log\frac1\delta+\frac{1-\eta}{\delta}\right),
 \qquad \eta\in[\eta_0,1].
-$$
+```
 
 Here $\delta$ tends to zero with $E,\eta_0$ fixed. Keeping the energy dependence visible, the hard-family lower exponent is proportional to $(E-1/2)(1-\eta)/\delta$, whereas the recovery upper uses $E(1-\eta)/\delta$. This theorem does not assert a uniform matching energy law as $E$ approaches $1/2$ with $\delta$.
 
 The threshold on $E$ is necessary for a nonempty origin-negative alternative: if $p_{\rm odd}=\sum_{n\ \rm odd}p_n$, then
 
-$$
+```math
 \theta=1-2p_{\rm odd},\qquad
 \sum_n np_n\geq p_{\rm odd}.
-$$
+```
 
 Thus $\theta\leq-\delta$ requires $E\geq(1+\delta)/2$. The lower construction obeys this requirement and uses a null with an explicitly nonnegative Wigner function everywhere, not merely nonnegative parity at the origin.
 
@@ -137,9 +137,9 @@ This is a certification promise at one prescribed point. A test that searches al
 
 Let $\eta=\eta(\delta)\geq\eta_0$ and keep $E$ fixed. The uniform theorem gives a polynomial bound in $1/\delta$ exactly when
 
-$$
-1-\eta(\delta)=O\!\left(\delta\log\frac1\delta\right).
-$$
+```math
+1-\eta(\delta)=O \left(\delta\log\frac1\delta\right).
+```
 
 If the ratio $(1-\eta)/(\delta\log(1/\delta))$ tends to infinity, the required copy count grows faster than every fixed polynomial. If that ratio is merely unbounded, no single uniform polynomial bound covers the whole sequence; a superpolynomial subsequence follows. This distinction matters for oscillating loss schedules.
 

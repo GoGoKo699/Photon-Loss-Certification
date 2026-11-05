@@ -24,25 +24,25 @@ The construction depends on the requested accuracy. The theorem does not assert 
 
 Write $\nu=1-\eta$. The uniform minimax theorem identifies
 
-$$
-\nu=O\!\left(\delta\log\frac1\delta\right)
-$$
+```math
+\nu=O \left(\delta\log\frac1\delta\right)
+```
 
 as the loss scale compatible with polynomial copy complexity at fixed energy. This allows regularized inverse reconstruction.
 
 A stricter scale lets the experimenter ignore the correction altogether. Couple a source count $n$ to the received count by independently deleting each photon with probability $\nu$. The two parity values differ only if an odd number of photons is deleted. Hence
 
-$$
+```math
 |\theta(\rho)-\theta(\mathcal L_\eta(\rho))|
-\leq 2\sum_n p_n\Pr\{\text{at least one deletion}\mid n\}
+\leq 2\sum_n p_n\Pr\lbrace \text{at least one deletion}\mid n\rbrace
 \leq2\nu E.
-$$
+```
 
 If $\nu E\leq\delta/4$, the loss bias is at most $\delta/2$. The empirical mean of received parities has statistical error at most $\delta/2$ with failure probability at most $\beta$ when
 
-$$
+```math
 N\geq\frac{8}{\delta^2}\log\frac2\beta,
-$$
+```
 
 by Hoeffding's inequality for variables in $[-1,1]$. Thus direct uncorrected parity already achieves the target accuracy in this regime. The direct-measurement bias scale and the polynomial-complexity boundary are different: the region between them is precisely where correction can help without requiring a superpolynomial number of copies.
 
