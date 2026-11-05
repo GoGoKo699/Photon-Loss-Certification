@@ -34,6 +34,10 @@ Start with the [scientific overview](science/README.md), then the [model and mai
 
 The [related-work comparison](references/RELATED_WORK.md) separates the known instability of inverse parity reconstruction and the inherited statistical methods from the mean-constrained minimax theorem proved here. The [bibliography](references/REFERENCES.md) provides primary sources.
 
+## Learn the project
+
+The [learning route](learning/README.md) connects optical state measurement to the precision law through [30 milestones](learning/MILESTONES.md). Its single educational anchor is Ulf Leonhardt's *Measuring the Quantum State of Light* (1997). The [source-to-project bridge](learning/LEONHARDT_BRIDGE.md) gives the relevant reading, a worked photon-loss example and the additional statistical and analytic ingredients supplied by this project.
+
 ## Reproduce the checks
 
 ```bash

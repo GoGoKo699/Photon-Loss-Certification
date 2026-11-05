@@ -14,6 +14,8 @@ The central result gives matching upper and lower copy-complexity orders. With a
 
 For attribution, read [related work](../references/RELATED_WORK.md) and the [bibliography](../references/REFERENCES.md). For independent finite checks of the formulas and optimization, use [verification](../verification/README.md).
 
+For an optical introduction and a structured route through the argument, use the [Leonhardt bridge](../learning/LEONHARDT_BRIDGE.md) and [30-milestone map](../learning/MILESTONES.md).
+
 ## How the proofs fit together
 
 The lower bound starts with Fock-diagonal states whose parities differ while their low moments agree. Loss makes their received count distributions exponentially close. Diluting the hard component keeps the source mean bounded. One member has a globally nonnegative Wigner function, so the same construction gives a certification converse. Since the received states commute, no collective POVM has more discrimination information than the full photon-count string.

@@ -12,6 +12,10 @@ The project determines the minimax number of post-loss copies needed to estimate
 - Attribution and closest comparisons: references/RELATED_WORK.md and references/REFERENCES.md.
 - Reproduction commands and finite-check scope: verification/README.md, verification/verify_photon_loss.py and verification/results.json.
 
+## Study route
+
+Start at learning/README.md. The single educational anchor is Ulf Leonhardt, Measuring the Quantum State of Light (1997). learning/LEONHARDT_BRIDGE.md maps the verified source sections to this project's optical model and explains the additional statistical and analytic steps. learning/MILESTONES.md gives exactly 30 project-defined understanding targets in two phases, with dependencies and canonical source pointers. Use the scientific pages for exact claims and proofs; use the bridge and milestones to connect their meaning. Other bibliography entries support attribution and formal proof ingredients.
+
 ## Essential distinctions
 
 The target is input parity before known pure loss, measured only through received copies. Delta is a parity accuracy; the Wigner value at the origin is 2/pi times parity. The main energy promise is a bound on the mean, not a finite photon cutoff or an exponential tail. The lower bound permits all collective output POVMs; the upper uses photon counting and constrained inference. The certification null is positive throughout phase space, but the matching alternative is negative at the prescribed origin. Copy complexity, optimization runtime and detector resolution are distinct. Fixed-loss bounds match exponential order without claiming an optimal leading exponent. Numerical results check finite examples rather than prove the asymptotic theorem.
