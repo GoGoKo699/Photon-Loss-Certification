@@ -8,7 +8,7 @@ The source comparisons are in [Related work](RELATED_WORK.md). Citation keys bel
 
 Antoine Royer, **Wigner function as the expectation value of a parity operator**, *Physical Review A* **15**, 449–450 (1977). [Publisher and DOI](https://doi.org/10.1103/PhysRevA.15.449).
 
-The displaced-parity interpretation of the Wigner function. Numerical prefactors depend on phase-space conventions; this repository uses $W_\rho(0)=(2/\pi)\operatorname{Tr}[(-1)^{\hat n}\rho]$.
+The displaced-parity interpretation of the Wigner function. Numerical prefactors depend on phase-space conventions; this repository uses $W_\rho(0)=(2/\pi)\mathrm{Tr}[(-1)^{\hat n}\rho]$.
 
 ### Ban99
 
@@ -78,15 +78,15 @@ Omar Fawzi, Aadil Oufkir, and Robert Salzmann, **Optimal Fidelity Estimation fro
 
 The main task is fidelity estimation from binary measurements. **Version distinction:** published Appendix B treats photon-loss robustness under an energy constraint; this appendix is absent from the inspected arXiv v1. Claims about that appendix refer to the published paper.
 
-## Background texts
+## Educational anchor and formal background
 
-These books provide entry points to the optical and quantum-information formalism. They are not cited as sources of the minimax rate proved in this repository.
+Leonhardt is the single anchor for the [learning route](../learning/README.md). The other entries support the channel and distinguishability formalism used in the scientific account. The minimax rate is proved in the repository's scientific pages.
 
 ### Leo97
 
 Ulf Leonhardt, **Measuring the Quantum State of Light**, Cambridge Studies in Modern Optics **22**, Cambridge University Press (1997), ISBN 9780521497305. [Publisher front matter](https://assets.cambridge.org/97805214/97305/frontmatter/9780521497305_frontmatter.pdf); [author's institutional bibliographic record](https://research-portal.st-andrews.ac.uk/en/publications/measuring-the-quantum-state-of-light/).
 
-Background on optical quantum-state measurement and phase-space representations.
+Selected educational anchor for optical quantum-state measurement and phase-space representations. The [source-to-project bridge](../learning/LEONHARDT_BRIDGE.md) identifies the relevant reading and the additional arguments needed here.
 
 ### Hol19
 
